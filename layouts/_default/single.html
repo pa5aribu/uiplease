@@ -67,9 +67,9 @@
 						</div>
 
 						<figure class="img-header-wrapper">
-							<img class="img-header" src="{{ .Site.BaseURL }}images/posters/facebook-live-poster.png">
+							<img class="img-header" src="{{ .Site.BaseURL }}images/posters/{{ .Params.poster }}">
 							<div class="buttons-wrapper">
-								<a href="/" class="button">Demo</a>
+								<a href="{{ .Site.BaseURL }}demo/{{ .File.BaseFileName }}" class="button">Demo</a>
 								<a href="/" class="button alt">Download Source</a>
 							</div>
 						</figure>

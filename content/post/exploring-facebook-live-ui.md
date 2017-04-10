@@ -4,6 +4,7 @@ date = "2017-04-10T05:30:31+07:00"
 title = "Exploring Facebook Live UI"
 Description = "Creative approach of facebook live UI interaction"
 thumbnail = "facebook-live-thumb.png"
+poster = "facebook-live-poster.png"
 
 +++
 
