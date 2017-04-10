@@ -110,8 +110,7 @@ header {
 #home {
   margin-bottom: 60px; }
   #home p {
-    color: #999;
-    color: #91a2b0; }
+    color: red; }
   #home p {
     font-size: 2rem; }
 
