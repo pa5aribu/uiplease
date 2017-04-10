@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Adamina");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
+@media (min-width: 1025px) {
+  .base-width {
+    margin: 0 auto;
+    width: 1024px; } }
+
+h1 {
+  color: #000;
+  font-family: "Gilroy-Light";
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: "kannada_mnregular";
+  line-height: 0.75; }
+
+h3 {
+  font-size: 1rem;
+  font-family: "Adamina", sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  letter-spacing: .75px; }
+
+h4 {
+  font-size: 1.5rem;
+  color: #6b7c93;
+  line-height: 0.75; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Adamina", sans-serif;
+  color: rgba(0, 0, 0, 0.65); }
+
+detail {
+  font-family: "Adamina", sans-serif;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.3); }
+
+mark {
+  background: #A192FC;
+  color: #fff;
+  padding: 0 5px; }
+
+.button {
+  padding: 12px 18px;
+  border-radius: 3px;
+  font-size: .9rem;
+  letter-spacing: 1.2px;
+  color: #fff;
+  background: #426ec2;
+  display: inline-block;
+  font-family: "Raleway";
+  text-transform: uppercase;
+  font-weight: 400;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
+  .button.alt {
+    background: #32325D; }
+
+li {
+  font-size: 1rem;
+  line-height: 1.75;
+  font-family: "Adamina", sans-serif;
+  color: rgba(0, 0, 0, 0.65); }
+
+ol {
+  counter-reset: number; }
+
+ol li {
+  counter-increment: number; }
+
+ol li:not(:last-child) {
+  margin-bottom: 5px; }
+
+ol li::before {
+  content: counter(number) ". "; }
+
+header {
+  box-sizing: border-box;
+  margin: 70px 0 100px; }
+  header.article-header {
+    margin-top: 0;
+    margin-bottom: 70px; }
+    header.article-header .header-content {
+      border-bottom: 1px solid #eee;
+      padding: 30px 0; }
+  header .row {
+    font-size: 0; }
+  header .logo {
+    display: inline-block; }
+  header .logo img {
+    height: 40px;
+    display: block; }
+
+.header-navigation {
+  text-align: right;
+  font-size: 0; }
+  .header-navigation li {
+    display: inline-block;
+    margin-left: 15px; }
+  .header-navigation a {
+    font-size: 1rem;
+    line-height: 40px;
+    display: block;
+    font-family: "Adamina", sans-serif;
+    color: #000; }
+
+#home {
+  margin-bottom: 60px; }
+  #home p {
+    color: #999;
+    color: #91a2b0; }
+  #home p {
+    font-size: 2rem; }
+
+#post {
+  margin-bottom: 100px; }
+  #post p {
+    font-size: 1.1rem;
+    line-height: 1.75; }
+  #post p:not(:last-child) {
+    margin-bottom: 20px; }
+  #post h4 {
+    padding-top: 20px;
+    margin-bottom: 20px; }
+  #post hr {
+    height: 0.15rem;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    background: #e1e4e8; }
+  #post img:not(.img-header) {
+    width: 100%;
+    display: block;
+    margin: 30px 0 30px; }
+  #post pre {
+    margin-bottom: 30px; }
+  #post a:not(.button) {
+    color: #426ec2; }
+
+.article-header p {
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.4); }
+
+.img-header-wrapper {
+  margin: 30px 0 60px; }
+  .img-header-wrapper .img-header {
+    width: calc(100% + 40px);
+    display: block;
+    position: relative;
+    left: -40px;
+    box-shadow: -20px 15px 50px 0px rgba(50, 50, 93, 0.05), -20px 20px 35px rgba(50, 50, 93, 0.15); }
+  .img-header-wrapper .buttons-wrapper {
+    margin-top: 40px; }
+
+.buttons-wrapper {
+  text-align: left;
+  font-size: 0; }
+  .buttons-wrapper .button:not(:last-child) {
+    margin-right: 10px; }
+
+#sidebar {
+  padding-left: 40px;
+  position: sticky;
+  top: 40px; }
+  #sidebar #fixed-box {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #eee; }
+
+.title {
+  font-family: "Gilroy-Light";
+  font-size: 1.2rem;
+  display: block; }
+
+.section-content {
+  width: 1040px;
+  margin: 0 auto; }
+
+.wrapper-3 {
+  margin: 0 -15px; }
+  .wrapper-3 .col {
+    padding: 0 15px;
+    position: relative; }
+
+.box {
+  position: relative;
+  display: block; }
+  .box h3 {
+    margin: 20px 0 5px; }
+  .box .thumbnail {
+    width: 100%; }

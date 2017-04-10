@@ -1,0 +1,51 @@
+// position mixin
+@import "position";
+
+@import "atoms/base";
+
+@import "molecules/header";
+@import "molecules/home";
+@import "molecules/post";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+.title {
+	font-family: $Gilroy-Light;
+	font-size: 1.2rem;
+	display: block;
+}
+
+body {
+	// background: red;
+}
+
+.section-content {
+	width: 1040px;
+	margin: 0 auto;
+}
+
+.wrapper-3 {
+	margin: 0 -15px;
+
+	.col {
+		padding: 0 15px;
+		position: relative;
+	}
+
+	.col-content {
+		
+	}
+}
+
+.box {
+	position: relative;
+	display: block;
+
+	h3 {
+		margin: 20px 0 5px;
+	}
+
+	.thumbnail {
+		width: 100%;
+	}
+}

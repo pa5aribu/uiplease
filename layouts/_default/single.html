@@ -1,0 +1,64 @@
+	{{ partial "head.html" . }}
+
+	<body>
+
+		<header class="article-header">
+	    <div class="base-width header-content">
+
+	      <div class="row">
+	        <div class="col-md-4 col-sm-4">
+	          <a href="{{ .Site.BaseURL }}" class="logo">
+	            <img src="{{ .Site.BaseURL }}images/logo2.png" alt="">
+	          </a>
+	        </div>
+
+	        <div class="col-md-8 col-sm-8">
+	          <ul class="header-navigation">
+	            <li><a href="">Contact</a></li>
+	            <li><a href="">About Me</a></li>
+	          </ul>
+	        </div>
+	      </div>
+
+	    </div>
+	  </header>
+
+		<article id="post">
+			<div class="base-width article-content">
+				<div class="row">
+					<div class="col-md-8 col-sm-8 col-xs-12">
+
+						<div class="article-header">
+							<h2>{{ .Title }}</h2>
+							<p>{{ .Description }}</p>
+						</div>
+						
+						<!-- <detail class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</detail> -->
+
+						<figure class="img-header-wrapper">
+							<img class="img-header" src="{{ .Site.BaseURL }}images/posters/facebook-live-poster.png">
+							<div class="buttons-wrapper">
+								<a href="/" class="button">Demo</a>
+								<a href="/" class="button alt">Download Source</a>
+							</div>
+						</figure>
+						
+						<!-- content -->
+						{{ .Content }}
+
+						<!-- {{ partial "disqus.html" . }} -->
+						{{ template "_internal/disqus.html" . }}
+
+						
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<section id="sidebar">
+							<div id="fixed-box"></div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</article>
+
+	</body>
+</html>

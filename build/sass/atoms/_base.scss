@@ -1,0 +1,118 @@
+@media (min-width: 1025px) {
+
+	.base-width {
+		margin: 0 auto;
+		width: 1024px;
+	}
+}
+
+// fonts
+$Gilroy-Medium: "Gilroy-Medium";
+$Gilroy-Light: "Gilroy-Light";
+$Gilroy-Bold: "Gilroy-Bold";
+
+$kannada-mn: "kannada_mnregular";
+
+@import url('https://fonts.googleapis.com/css?family=Adamina');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+$adamina: "Adamina", sans-serif;
+
+h1 {
+	color: #000;
+	font-family: $Gilroy-Light;
+	font-size: 3rem;
+}
+
+h2 {
+	// font-family: $Gilroy-Light;
+	font-size: 2rem;
+	// color: #6b7c93;
+	// color: #000;
+	color: rgba(0,0,0,.75);
+	// color: #6b7c93;
+	// text-transform: uppercase;
+	font-family: $kannada-mn;
+	line-height: 0.75;
+
+}
+
+h3 {
+	font-size: 1rem;
+	// font-family: $Gilroy-Light;
+	font-family: $adamina;
+	// color: #6b7c93;
+	color: rgba(0,0,0,.75);
+	// line-height: .75;
+	letter-spacing: .75px;
+}
+
+h4 {
+	font-size: 1.5rem;
+	// font-family: $Gilroy-Light;
+	color: #6b7c93;
+	line-height: 0.75;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.5;
+	font-family: $adamina;
+	color: rgba(0,0,0,.65);
+}
+
+detail {
+	// font-family: $Gilroy-Light;
+	font-family: $adamina;
+	font-size: 0.85rem;
+	color: rgba(0,0,0,.3);
+	// letter-spacing: 1px;
+}
+
+mark {
+	background: #A192FC;
+	color: #fff;
+	padding: 0 5px;
+}
+
+.button {
+	padding: 12px 18px;
+	border-radius: 3px;
+	font-size: .9rem;
+	letter-spacing: 1.2px;
+	color: #fff;
+	background: #426ec2;
+	display: inline-block;
+	font-family: "Raleway";
+	text-transform: uppercase;
+	font-weight: 400;
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+
+	&.alt {
+		background: #32325D;
+	}
+}
+
+
+li {
+	font-size: 1rem;
+	line-height: 1.75;
+	font-family: $adamina;
+	color: rgba(0,0,0,.65);	
+}
+
+ol {
+	counter-reset: number;
+}
+
+ol li {
+	counter-increment: number;
+}
+
+ol li:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+ol li::before {
+	content: counter(number) ". ";
+}

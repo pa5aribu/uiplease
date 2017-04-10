@@ -1,0 +1,73 @@
+{{ partial "head.html" . }}
+
+  <body>
+
+    <header>
+      <div class="base-width header-content">
+
+        <div class="row">
+          <div class="col-md-4">
+            <a href="" class="logo">
+              <img src="{{ .Site.BaseURL }}images/logo.png" alt="">
+            </a>
+          </div>
+
+          <div class="col-md-8">
+            <ul class="header-navigation">
+              <li><a href="">Contact</a></li>
+              <li><a href="">About Me</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <section id="home">
+      <div class="base-width home-content">
+        <!-- <p>A coding playground that explores<br>interactive UI on the web.</p> -->
+        <p>Exploring and building modern-<br>interactive UI on the web.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="base-width">
+        <div class="row wrapper-3">
+          {{ range .Data.Pages }}
+          <div class="col col-md-4">
+            <a href="{{ .Permalink }}" class="col-content box">
+
+              <img class="thumbnail" src="{{ .Site.BaseURL }}images/thumbnails/{{ .Params.thumbnail }}" alt="">
+              
+              <h3>{{ .Title }}</h3>
+              <detail class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</detail>
+
+            </div>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <!--<div class="content container">
+      <div class="posts">
+
+        {{ range .Data.Pages }}
+        <div class="post">
+          <h1 class="post-title">
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </h1>
+
+          <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+
+          {{ .Content }}
+        </div>
+        {{ end }}
+
+      </div>
+    </div>-->
+
+  </body>
+</html>
