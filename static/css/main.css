@@ -6,6 +6,10 @@
     margin: 0 auto;
     width: 1024px; } }
 
+@media (max-width: 1024px) {
+  .base-width {
+    padding: 0 20px; } }
+
 h1 {
   color: #000;
   font-family: "Gilroy-Light";
@@ -77,6 +81,9 @@ ol li:not(:last-child) {
 ol li::before {
   content: counter(number) ". "; }
 
+#works {
+  margin-bottom: 50px; }
+
 header {
   box-sizing: border-box;
   margin: 70px 0 100px; }
@@ -110,7 +117,7 @@ header {
 #home {
   margin-bottom: 60px; }
   #home p {
-    color: red; }
+    color: #91a2b0; }
   #home p {
     font-size: 2rem; }
 
@@ -119,6 +126,8 @@ header {
   #post p {
     font-size: 1.1rem;
     line-height: 1.75; }
+  #post li {
+    font-size: 1.1rem; }
   #post p:not(:last-child) {
     margin-bottom: 20px; }
   #post h4 {
@@ -139,18 +148,28 @@ header {
     margin-bottom: 30px; }
   #post a:not(.button) {
     color: #426ec2; }
+  #post code {
+    padding: 20px; }
+
+.article-header detail {
+  margin-bottom: 30px;
+  display: block; }
 
 .article-header p {
   font-size: 1.25rem;
   color: rgba(0, 0, 0, 0.4); }
 
+@media (min-width: 1025px) {
+  .img-header {
+    width: calc(100% + 80px);
+    left: -40px; } }
+
 .img-header-wrapper {
   margin: 30px 0 60px; }
   .img-header-wrapper .img-header {
-    width: calc(100% + 40px);
+    width: 100%;
     display: block;
     position: relative;
-    left: -40px;
     box-shadow: -20px 15px 50px 0px rgba(50, 50, 93, 0.05), -20px 20px 35px rgba(50, 50, 93, 0.15); }
   .img-header-wrapper .buttons-wrapper {
     margin-top: 40px; }

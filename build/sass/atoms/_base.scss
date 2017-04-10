@@ -6,6 +6,13 @@
 	}
 }
 
+@media (max-width: 1024px) {
+
+	.base-width {
+		padding: 0 20px;
+	}
+}
+
 // fonts
 $Gilroy-Medium: "Gilroy-Medium";
 $Gilroy-Light: "Gilroy-Light";
@@ -105,4 +112,8 @@ ol li:not(:last-child) {
 
 ol li::before {
 	content: counter(number) ". ";
+}
+
+#works {
+	margin-bottom: 50px;
 }

@@ -221,3 +221,7 @@ Here's the wave animation code
 		}
 		
 	}
+
+#### Conclusion
+
+I hope you find this approach inspiring! I will do more of these experiments later. Stay tuned!

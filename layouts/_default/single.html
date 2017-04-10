@@ -1,39 +1,70 @@
-	{{ partial "head.html" . }}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+	<head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	  <meta property="og:image" content="{{ .Site.BaseURL }}images/posters/facebook-live-poster.png">
+
+	  <!-- Enable responsiveness on mobile devices-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	  {{ if .IsHome }}
+	  <title>{{ .Site.Title }}</title>
+	  {{ else }}
+	  <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+	  {{ end }}
+
+	  <!-- CSS -->
+	  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/flexboxgrid.css">
+	  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/reset.css">
+	  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fonts.min.css">
+	  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
+
+	  <link rel="icon" href="{{ .Site.BaseURL }}images/favicon.ico">
+
+	  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+	  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+	  <script>hljs.initHighlightingOnLoad();</script>
+
+	</head>
 
 	<body>
 
 		<header class="article-header">
-	    <div class="base-width header-content">
+	    <div class="header-content">
 
-	      <div class="row">
-	        <div class="col-md-4 col-sm-4">
-	          <a href="{{ .Site.BaseURL }}" class="logo">
-	            <img src="{{ .Site.BaseURL }}images/logo2.png" alt="">
-	          </a>
-	        </div>
+	    	<div class="base-width">
 
-	        <div class="col-md-8 col-sm-8">
-	          <ul class="header-navigation">
-	            <li><a href="">Contact</a></li>
-	            <li><a href="">About Me</a></li>
-	          </ul>
-	        </div>
-	      </div>
+		      <div class="row">
+		        <div class="col-md-4 col-sm-4 col-xs-4">
+		          <a href="{{ .Site.BaseURL }}" class="logo">
+		            <img src="{{ .Site.BaseURL }}images/logo2.png" alt="">
+		          </a>
+		        </div>
+
+		        <div class="col-md-8 col-sm-8 col-xs-8">
+		          <ul class="header-navigation">
+		            <li><a href="">Contact</a></li>
+		            <li><a href="">About Me</a></li>
+		          </ul>
+		        </div>
+		      </div>
+	    		
+	    	</div>
+
 
 	    </div>
 	  </header>
 
 		<article id="post">
 			<div class="base-width article-content">
-				<div class="row">
-					<div class="col-md-8 col-sm-8 col-xs-12">
+				<div class="row around-md">
+					<div class="col-md-9 col-sm-12 col-xs-12">
 
 						<div class="article-header">
+							<detail>{{ .Date.Format "January 2, 2006" }}</detail>
 							<h2>{{ .Title }}</h2>
 							<p>{{ .Description }}</p>
 						</div>
-						
-						<!-- <detail class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</detail> -->
 
 						<figure class="img-header-wrapper">
 							<img class="img-header" src="{{ .Site.BaseURL }}images/posters/facebook-live-poster.png">
@@ -51,11 +82,11 @@
 
 						
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
+					<!-- <div class="col-md-4 col-sm-4 col-xs-12">
 						<section id="sidebar">
 							<div id="fixed-box"></div>
 						</section>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</article>

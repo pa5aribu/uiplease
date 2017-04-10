@@ -14,6 +14,10 @@
 		line-height: 1.75;
 	}
 
+	li {
+		font-size: 1.1rem;
+	}
+
 	p:not(:last-child) {
 		margin-bottom: 20px;
 	}
@@ -46,9 +50,18 @@
 	a:not(.button) {
 		color: #426ec2;
 	}
+
+	code {
+		padding: 20px;
+	}
 }
 
 .article-header {
+
+	detail {
+		margin-bottom: 30px;
+    display: block;
+	}
 
 	p {
 		font-size: 1.25rem;
@@ -58,14 +71,22 @@
 
 $imagePad: 40px;
 
+@media (min-width: 1025px) {
+
+	.img-header {
+		width: calc(100% + 80px);
+		left: -$imagePad;
+		// zoom: 1.2;
+	}
+}
+
 .img-header-wrapper {
 	margin: 30px 0 60px;
 
 	.img-header {
-		width: calc(100% + 40px);
+		width: 100%;
 		display: block;
 		position: relative;
-		left: -$imagePad;
 		box-shadow: -20px 15px 50px 0px rgba(50, 50, 93, 0.05), -20px 20px 35px rgba(50, 50, 93, 0.15);
 	}
 
