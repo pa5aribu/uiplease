@@ -25,8 +25,8 @@ var preloadTL = new TimelineMax({
 
 preloadTL
 
-	.from(imageWrapper, .6, {
-		opacity: 0,
+	.to(imageWrapper, .6, {
+		opacity: 1,
 		onComplete: function(){
 			// adding class active will animate the image wrapper to it's original position
 			this.target.classList.add("active")
@@ -34,13 +34,13 @@ preloadTL
 	})
 
 	// scale up background
-	.from(".background", .9, {
+	.to(".background", .9, {
 		onStart: function(){
 			// reveal live mark
 			live.classList.add("active")
 		},
 		delay: .6,
-		scale: 0,
+		scale: 1,
 		ease: Elastic.easeOut.config(1, 0.65)
 	})
 

@@ -1,41 +1,42 @@
-<!DOCTYPE html>
-<html>
-	<title>Exploring Facebook Live UI</title>
-	<link rel="stylesheet" href="style.css">
++++
 
-	<!--main container-->
-	<figure id="main-container">
+Description = "Creative approach of facebook live UI interaction"
+link = "exploring-facebook-live-ui"
 
-		<!-- live mark -->
-		<div class="live">live</div>
++++
 
-		<!-- image wrapper -->
-		<div class="image-wrapper">
+<!--main container-->
+<figure id="main-container">
 
-			<!--this supposed to be video, but I'm using gif because it's small-->
-			<img src="img/fake-video.gif" alt="Smiling Cat">
+	<!-- live mark -->
+	<div class="live">live</div>
 
-			<!-- the emoji-reaction will be appended here if the button is clicked -->
+	<!-- image wrapper -->
+	<div class="image-wrapper">
 
+		<!--this supposed to be video, but I'm using gif because it's small-->
+		<img src="img/fake-video.gif" alt="Smiling Cat">
+
+		<!-- the emoji-reaction will be appended here if the button is clicked -->
+
+	</div>
+
+	<div class="emojis-wrapper">
+		<!--emojis list-->
+		<div class="emojis-list">
+
+			<!-- background -->
+			<div class="background"></div>
+
+			<div class="emoji like" id="like"></div>
+			<div class="emoji love" id="love"></div>
+			<div class="emoji haha" id="haha"></div>
+			<div class="emoji yay" id="yay"></div>
+			<div class="emoji angry" id="angry"></div>
 		</div>
+	</div>
 
-		<div class="emojis-wrapper">
-			<!--emojis list-->
-			<div class="emojis-list">
+</figure>
 
-				<!-- background -->
-				<div class="background"></div>
-
-				<div class="emoji like" id="like"></div>
-				<div class="emoji love" id="love"></div>
-				<div class="emoji haha" id="haha"></div>
-				<div class="emoji yay" id="yay"></div>
-				<div class="emoji angry" id="angry"></div>
-			</div>
-		</div>
-
-	</figure>
-
-	<script src="TweenMax.min.js"></script>
-	<script src="interaction.js"></script>
-</html>
+<script src="TweenMax.min.js"></script>
+<script src="interaction.js"></script>

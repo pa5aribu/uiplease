@@ -161,7 +161,7 @@ header {
 
 @media (min-width: 1025px) {
   .img-header {
-    width: calc(100% + 80px);
+    width: calc(100% + 80px) !important;
     left: -40px; } }
 
 .img-header-wrapper {
