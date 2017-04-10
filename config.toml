@@ -1,4 +1,4 @@
 languageCode = "en-us"
 title = "uiplease"
-baseURL = "http://www.uiplease.com/"
+baseURL = "https://www.uiplease.com/"
 disqusShortname = "uiplease"
