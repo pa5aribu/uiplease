@@ -116,7 +116,8 @@ body {
 	border-radius: 50%;
 	position: relative;
 	z-index: 9;
-	transform: translateY(calc(100px + var(--effect-width)));
+	transform: translateY(150px);
+	opacity: 0;
 }
 
 /*user variation*/

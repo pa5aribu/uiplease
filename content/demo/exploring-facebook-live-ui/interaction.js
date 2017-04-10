@@ -107,10 +107,13 @@ body.addEventListener("click", function(e){
 		// effect animation timeline
 		var effectTl = new TimelineMax({});
 
+		// effectTl.timeScale(.1)
+
 		effectTl
 
 			.to(user, .3, {
 				y: 0,
+				opacity: 1,
 				scale: .5
 			})
 

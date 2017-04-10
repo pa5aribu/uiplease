@@ -38,7 +38,7 @@
     <section id="works">
       <div class="base-width">
         <div class="row wrapper-3">
-          {{ range .Data.Pages }}
+          {{ range where .Data.Pages "Section" "post" }}
           <div class="col col-md-4">
             <a href="{{ .Permalink }}" class="col-content box">
 
