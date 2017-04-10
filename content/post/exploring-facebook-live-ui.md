@@ -5,6 +5,7 @@ title = "Exploring Facebook Live UI"
 Description = "Creative approach of facebook live UI interaction"
 thumbnail = "facebook-live-thumb.png"
 poster = "facebook-live-poster.png"
+download = "https://archive.org/download/exploring-facebook-live-ui/exploring-facebook-live-ui.zip"
 
 +++
 
