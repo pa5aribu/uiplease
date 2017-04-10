@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+	<title>Exploring Facebook Live UI</title>
+
+	<meta name="viewport" content="{{ .Params.Description }}">
+
+	<link rel="icon" href="https://www.uiplease.com/images/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+
+	<header style="position: fixed; top: 30px; left: 30px;">
+		<a href="{{ .Site.BaseURL }}post/{{ .Params.link }}" style="width: 80px; display: block;">
+			<img src="https://www.uiplease.com/images/logo3.png" alt="logo" style="width: 100%;">
+		</a>
+	</header>
+
+	{{ .Content }}
+
+</html>

@@ -30,29 +30,26 @@
 	<body>
 
 		<header class="article-header">
-	    <div class="header-content">
 
-	    	<div class="base-width">
+    	<div class="base-width">
 
-		      <div class="row">
-		        <div class="col-md-4 col-sm-4 col-xs-4">
-		          <a href="{{ .Site.BaseURL }}" class="logo">
-		            <img src="{{ .Site.BaseURL }}images/logo2.png" alt="">
-		          </a>
-		        </div>
+	      <div class="row header-content">
+	        <div class="col-md-4 col-sm-4 col-xs-4">
+	          <a href="{{ .Site.BaseURL }}" class="logo">
+	            <img src="{{ .Site.BaseURL }}images/logo2.png" alt="">
+	          </a>
+	        </div>
 
-		        <div class="col-md-8 col-sm-8 col-xs-8">
-		          <ul class="header-navigation">
-		            <li><a href="">Contact</a></li>
-		            <li><a href="">About Me</a></li>
-		          </ul>
-		        </div>
-		      </div>
-	    		
-	    	</div>
+	        <div class="col-md-8 col-sm-8 col-xs-8">
+	          <ul class="header-navigation">
+	            <li><a href="">Contact</a></li>
+	            <li><a href="">About Me</a></li>
+	          </ul>
+	        </div>
+	      </div>
+    		
+    	</div>
 
-
-	    </div>
 	  </header>
 
 		<article id="post">
@@ -70,7 +67,7 @@
 							<img class="img-header" src="{{ .Site.BaseURL }}images/posters/{{ .Params.poster }}">
 							<div class="buttons-wrapper">
 								<a href="{{ .Site.BaseURL }}demo/{{ .File.BaseFileName }}" class="button">Demo</a>
-								<a href="/" class="button alt">Download Source</a>
+								<a href="{{ .Params.download }}" class="button alt">Download Source</a>
 							</div>
 						</figure>
 						
