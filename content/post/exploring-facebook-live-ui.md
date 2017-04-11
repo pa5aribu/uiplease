@@ -1,5 +1,4 @@
 +++
-
 date = "2017-04-10T05:30:31+07:00"
 title = "Exploring Facebook Live UI"
 Description = "Creative approach of facebook live UI interaction"
@@ -9,17 +8,15 @@ download = "https://archive.org/download/exploring-facebook-live-ui/exploring-fa
 
 +++
 
-On this very first tutorial, I want to explore Facebook Live UI. Facebook Live is a basic feature that offers live-streaming video capabilities to users. Watchers can also use emoji to the video. 
+On this very first tutorial, I want to explore the Facebook Live UI. Facebook Live is a basic feature that offers live-streaming video capabilities to users. Watchers can also add reaction to the video.
 
-I'm using GreenSock TweenMax to control the animation flow. If you're not familiar with TweenMax, you can learn here https://greensock.com/learning/
+I'm using GreenSock TweenMax to control the animation timeline. If you're not familiar with TweenMax, you can learn here https://greensock.com/learning/
 
 #### Preload Animation
 
-So, before we can actually interact with the emoji buttons, we need to load the video first. We transform the video's form using CSS to be like this.
+So, before we can actually interact with the emoji buttons, we need to load the video first. Upon loading, I transformed the video form to be look this the image below. It will be animated to its prior form when the class active is added.
 
 ![Example image](/images/articles/exploring-facebook-live-ui/1.png)
-
-The animation will be triggered by adding class active. This will remove the element's transform value and animate the image wrapper to its original form. We can achieve by simply using <mark>transform: none;</mark>
 
 	.image-wrapper {
 		/* transform layer's form */
@@ -34,11 +31,11 @@ The animation will be triggered by adding class active. This will remove the ele
 
 #### Emoji Animation Flow
 
-Now we can assume that our video is fully loaded, we then reveal the emojis. We will need a few steps to do this. Keep in mind, this animation is running by TweenMax.
+Now we can assume that our video is loaded, it's time to reveal the emojis. We will need a few steps to do this. Keep in mind, this animation is running by TweenMax.
 
 1. Show the background that contains the emojis as circle
-2. Then it morphs its width so it will 100% full. Simply changing the width from <mark>80px</mark> to <mark>100%</mark>
-3. Then we show each emoji one by one using <mark>scale</mark> property
+2. Morph the background's from circle to a form that holds all emojis. By simply changing the width valueu from <mark>80px</mark> to <mark>100%</mark>
+3. Then we show each emoji one by one using the <mark>staggerFrom</mark> method from TweenMax
 
 ![Example image](/images/articles/exploring-facebook-live-ui/2.png)
 
@@ -90,12 +87,12 @@ Now we can assume that our video is fully loaded, we then reveal the emojis. We 
 
 #### Pop In Effect
 
-The effect contains 10 lines of a bar. The <mark>bar-wrapper</mark> is rotated 36deg based on its index. This will form the asterisk symbol.
+The pop in effect has 10 lines/bar. The <mark>bar-wrapper</mark> is rotated 36deg, the next element has doubled value. This will form the asterisk symbol.
 To animate the <mark>bar</mark>, we simply transform its scaleY property from <mark>1</mark> to <mark>0</mark>.
 
 ![Example image](/images/articles/exploring-facebook-live-ui/3.png)
 
-Here's the HTML code
+Pop in effect markup code
 
 	<!-- HTML component -->
 	<div id="effect"></div>
@@ -105,7 +102,7 @@ Here's the HTML code
 		<!-- 9 more lines of above code -->
 	</div>
 
-Effect Styling
+Pop in effect style
 
 	/*effect*/
 	.emoji-reaction #effect {
@@ -159,7 +156,7 @@ Effect Styling
 		transform: rotate(36deg);
 	}
 
-Here's the JavaScript animation flow
+Pop in effect animation flow
 
 	// animation flow
 	.to(bar, .3, {
@@ -175,12 +172,12 @@ Here's the JavaScript animation flow
 		scaleY: 0
 	})
 
-#### Final touch: Wave Animation
+#### Wave Animation
 
-After the pop in effect, we can to translate the popped emoji to the left with waving effect. We can achieve this using requestAnimationFrame by gradually decreasing the translateX value. As for the waving effect, 
+After the pop in effect is done, then we animate the popped emoji (inside the effect) to the left with waving effect. We can achieve this by using requestAnimationFrame by gradually decreasing the translateX value. As for the waving effect, 
 we can simulate it using the <mark>Math.sin</mark> method.
 
-Here's the wave animation code
+Wave animation function
 
 	function waveAnim(user, animProps){
 
@@ -226,4 +223,4 @@ Here's the wave animation code
 
 #### Conclusion
 
-I hope you find this approach inspiring! I will do more of these experiments later. Stay tuned!
+I hope you find this exploration inspiring! Consider subscribing to get udpates from me!

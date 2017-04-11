@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "uiplease is a web that explores interactive ui on the web",
   "scripts": {
-    "watch-css": "node-sass -w build/sass/main.scss -o static/css/"
+    "sass": "node-sass -w build/sass/main.scss -o static/css/"
   },
   "author": "balapa",
   "license": "ISC",

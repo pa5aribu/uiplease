@@ -1,2 +1,7 @@
 /public
+/build
+/node_modules
+/content/post/building-stack-cards-ui.md
+/layouts/partials/sidebar.html
+package.json
 *.DS_Store

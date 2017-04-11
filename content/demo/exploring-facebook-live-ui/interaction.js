@@ -16,7 +16,7 @@ var body = document.body,
 
 // preload animation timeline
 var preloadTL = new TimelineMax({
-	delay: .3,
+	delay: 1,
 	onComplete: function(){
 		// autoclick the first emoji after animation is done
 		emoji.click()
@@ -57,7 +57,7 @@ preloadTL
 		ease: Elastic.easeOut.config(1, 0.65),
 		onComplete: function(){
 			// adding transition so emoji can animate when hovered
-			this.target.style = "transition: .15s all ease;";
+			this.target.setAttribute("style", "transition: .15s all ease;");
 		}
 	}, .1)
 

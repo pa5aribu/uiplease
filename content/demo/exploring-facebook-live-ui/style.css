@@ -113,6 +113,7 @@ body {
 .user {
 	width: var(--effect-width);
 	height: var(--effect-width);
+	background: url("img/emojis-small.svg") no-repeat 0 0;
 	background: url("img/user.jpg") no-repeat center center / cover;
 	border-radius: 50%;
 	position: relative;
