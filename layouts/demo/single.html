@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		
+		<title>{{ .Params.Title }}</title>
 
-	<title>Exploring Facebook Live UI</title>
+		<meta name="description" content="{{ .Params.Description }}">
 
-	<meta name="viewport" content="{{ .Params.Description }}">
+		<link rel="icon" href="{{ .Site.BaseURL }}images/favicon.ico">
+		<link rel="stylesheet" href="style.css">
 
-	<link rel="icon" href="https://www.uiplease.com/images/favicon.ico">
-	<link rel="stylesheet" href="style.css">
+		<style>
 
-	<header style="position: fixed; top: 30px; left: 30px;">
-		<a href="{{ .Site.BaseURL }}post/{{ .Params.link }}" style="width: 80px; display: block;">
-			<img src="https://www.uiplease.com/images/logo3.png" alt="logo" style="width: 100%;">
-		</a>
-	</header>
+			@import url('https://fonts.googleapis.com/css?family=Adamina');
+			
+			.demo-header {
+				position: fixed;
+				top: 30px;
+				left: 30px;
+			}
 
-	{{ .Content }}
+			.logo {
+				height: 35px;
+				display: block;
+				float: left;
+			}
+
+			.logo img {
+			 	height: 100%;
+				display: block;
+		 	}
+
+		 	.link {
+		 		line-height: 35px;
+		 		display: inline-block;
+		 		border-left: 1px solid #ccc;
+		 		margin-left: 15px;
+		 		padding-left: 15px;
+		 		font-size: 1rem;
+		 		font-family: "Adamina", sans-serif;
+		 		color: #426ec2;
+		 	}
+
+		</style>
+		
+	</head>
+
+	<body>
+
+		<header class="demo-header">
+			<a class="logo" href="{{ .Site.BaseURL }}">
+				<img src="https://www.uiplease.com/images/logo3.png" alt="logo">
+			</a>
+			<a class="link" href="{{ .Site.BaseURL }}post/{{ .Params.link }}">Back to Article</a>
+		</header>
+
+		{{ .Content }}
+
+	</body>
 
 </html>

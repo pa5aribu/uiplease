@@ -84,6 +84,31 @@ ol li::before {
 #works {
   margin-bottom: 50px; }
 
+@media (max-width: 767px) {
+  #about {
+    padding: 40px 0; }
+    #about .row {
+      min-height: initial !important; } }
+
+#about {
+  box-sizing: border-box; }
+  #about .logo {
+    margin-bottom: 25px;
+    display: block;
+    width: 160px; }
+    #about .logo img {
+      display: block;
+      width: 100%; }
+  #about p:not(:last-child) {
+    margin-bottom: 20px; }
+  #about .row {
+    min-height: 100vh; }
+
+.about-content {
+  padding: 40px;
+  background: #fff;
+  box-shadow: -20px 15px 50px 0px rgba(50, 50, 93, 0.05), -20px 20px 35px rgba(50, 50, 93, 0.15); }
+
 header {
   box-sizing: border-box;
   margin: 70px 0 100px; }
@@ -100,6 +125,14 @@ header {
   header .logo img {
     height: 40px;
     display: block; }
+  header .logo-alt.logo-alt {
+    display: none; }
+
+@media (max-width: 767px) {
+  .logo-prime.logo-prime {
+    display: none; }
+  .logo-alt.logo-alt.logo-alt {
+    display: block; } }
 
 .header-navigation {
   text-align: right;
@@ -147,7 +180,8 @@ header {
   #post pre {
     margin-bottom: 30px; }
   #post a:not(.button) {
-    color: #426ec2; }
+    color: #426ec2;
+    text-decoration: underline; }
   #post code {
     padding: 20px; }
 
@@ -175,10 +209,10 @@ header {
     margin-top: 40px; }
 
 .buttons-wrapper {
-  text-align: left;
+  text-align: center;
   font-size: 0; }
-  .buttons-wrapper .button:not(:last-child) {
-    margin-right: 10px; }
+  .buttons-wrapper .button {
+    margin: 0 10px; }
 
 #sidebar {
   padding-left: 40px;
@@ -203,6 +237,14 @@ header {
   .wrapper-3 .col {
     padding: 0 15px;
     position: relative; }
+
+@media (min-width: 1055px) {
+  .wrapper-3 {
+    margin: 0 -40px; } }
+
+@media (max-width: 767px) {
+  .wrapper-3 .col:not(:last-child) {
+    margin-bottom: 30px; } }
 
 .box {
   position: relative;

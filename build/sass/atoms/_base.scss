@@ -117,3 +117,45 @@ ol li::before {
 #works {
 	margin-bottom: 50px;
 }
+
+@media (max-width: 767px) {
+
+	#about {
+		padding: 40px 0;
+
+		.row {
+			min-height: initial !important;
+		}
+	}
+}
+
+#about {
+	box-sizing: border-box;
+
+	.logo {
+		// margin: 0 auto 25px;
+		margin-bottom: 25px;
+		display: block;
+		width: 160px;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	p:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.row {
+		min-height: 100vh;
+	}
+}
+
+.about-content {
+	padding: 40px;
+	background: #fff;
+	box-shadow: -20px 15px 50px 0px rgba(50, 50, 93, 0.05), -20px 20px 35px rgba(50, 50, 93, 0.15);
+	// border: 1px solid #f5f5f5;
+}

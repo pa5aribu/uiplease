@@ -25,6 +25,21 @@ header {
 		height: 40px;
 		display: block;		
 	}
+
+	.logo-alt.logo-alt {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.logo-prime.logo-prime {
+		display: none;
+	}
+
+	.logo-alt.logo-alt.logo-alt {
+		display: block;
+	}
 }
 
 .header-navigation {

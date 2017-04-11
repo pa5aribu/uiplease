@@ -42,8 +42,8 @@
 
 	        <div class="col-md-8 col-sm-8 col-xs-8">
 	          <ul class="header-navigation">
-	            <li><a href="">Contact</a></li>
-	            <li><a href="">About Me</a></li>
+	            <li><a href="mailto:uiplease@gmail.com">Contact</a></li>
+	            <li><a href="{{ .Site.BaseURL }}about">About</a></li>
 	          </ul>
 	        </div>
 	      </div>
@@ -77,7 +77,6 @@
 						<!-- {{ partial "disqus.html" . }} -->
 						{{ template "_internal/disqus.html" . }}
 
-						
 					</div>
 					<!-- <div class="col-md-4 col-sm-4 col-xs-12">
 						<section id="sidebar">

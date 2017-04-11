@@ -37,6 +37,22 @@ body {
 	}
 }
 
+@media (min-width: 1055px) {
+	
+	.wrapper-3 {
+		margin: 0 -40px;
+	}	
+
+}
+
+@media (max-width: 767px) {
+
+	.wrapper-3 .col:not(:last-child) {
+		margin-bottom: 30px;
+	}
+
+}
+
 .box {
 	position: relative;
 	display: block;

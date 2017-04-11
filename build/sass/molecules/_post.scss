@@ -49,6 +49,7 @@
 
 	a:not(.button) {
 		color: #426ec2;
+		text-decoration: underline;
 	}
 
 	code {
@@ -96,12 +97,15 @@ $imagePad: 40px;
 }
 
 .buttons-wrapper {
-	text-align: left;
+	text-align: center;
 	font-size: 0;
 
-	.button:not(:last-child) {
-		margin-right: 10px;
+	.button {
+		margin: 0 10px;
 	}
+	// .button:not(:last-child) {
+	// 	margin-right: 10px;
+	// }
 }
 
 #sidebar {
