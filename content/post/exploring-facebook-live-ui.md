@@ -10,7 +10,7 @@ github = "https://github.com/balapa/uiplease-demos/tree/master/exploring-faceboo
 
 On this very first tutorial, I want to explore the Facebook Live UI. Facebook Live is a basic feature that offers live-streaming video capabilities to users. Watchers can also add reaction to the video.
 
-I'm using GreenSock TweenMax to control the animation timeline. If you're not familiar with TweenMax, you can learn here https://greensock.com/learning/
+I'm using GreenSock TweenMax to control the animation timeline. If you're not familiar with TweenMax, you can learn here https://greensock.com/learning.
 
 #### Preload Animation
 
@@ -33,9 +33,9 @@ So, before we can actually interact with the emoji buttons, we need to load the 
 
 Now we can assume that our video is loaded, it's time to reveal the emojis. We will need a few steps to do this. Keep in mind, this animation is running by TweenMax.
 
-1. Show the background that contains the emojis as circle
-2. Morph the background's from circle to a form that holds all emojis. By simply changing the width valueu from <mark>80px</mark> to <mark>100%</mark>
-3. Then we show each emoji one by one using the <mark>staggerFrom</mark> method from TweenMax
+1. Show the background that contains the emojis as circle.
+2. Morph the background's from circle to a form that holds all emojis. By simply changing the width valueu from <mark>80px</mark> to <mark>100%</mark>.
+3. Then we show each emoji one by one using the <mark>staggerFrom</mark> method from TweenMax.
 
 ![Example image](/images/articles/exploring-facebook-live-ui/2.png)
 

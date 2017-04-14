@@ -16,7 +16,7 @@ var body = document.body,
 
 // preload animation timeline
 var preloadTL = new TimelineMax({
-	delay: 1,
+	delay: .3,
 	onComplete: function(){
 		// autoclick the first emoji after animation is done
 		emoji.click()
