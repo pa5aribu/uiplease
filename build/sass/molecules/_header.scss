@@ -51,12 +51,23 @@ header {
 		margin-left: 15px;
 	}
 
-	a {
-		font-size: 1rem;
-		line-height: 40px;
-		display: block;
-		// font-family: $Gilroy-Light;
-		font-family: $adamina;
-		color: #000;
+	&.article-header-navigation {
+		li {
+			line-height: initial;
+		}
 	}
+
+	&:not(.article-header-navigation) {
+
+		a {
+			font-size: 1rem;
+			line-height: 40px;
+			display: block;
+			// font-family: $Gilroy-Light;
+			font-family: $adamina;
+			color: #000;
+		}
+
+	}
+
 }

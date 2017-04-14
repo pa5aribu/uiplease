@@ -16,10 +16,10 @@ h1 {
   font-size: 3rem; }
 
 h2 {
-  font-size: 2rem;
-  color: rgba(0, 0, 0, 0.75);
-  font-family: "kannada_mnregular";
-  line-height: 0.75; }
+  font-size: 2.2rem;
+  color: #6b7c93;
+  font-family: "Gilroy-Light";
+  line-height: 1.25; }
 
 h3 {
   font-size: 1rem;
@@ -49,7 +49,7 @@ mark {
   padding: 0 5px; }
 
 .button {
-  padding: 12px 18px;
+  padding: 11.5px 18px;
   border-radius: 3px;
   font-size: .9rem;
   letter-spacing: 1.2px;
@@ -62,6 +62,10 @@ mark {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
   .button.alt {
     background: #32325D; }
+  .button.fb {
+    background: #3b5998; }
+  .button.tw {
+    background: #55acee; }
 
 li {
   font-size: 1rem;
@@ -140,7 +144,9 @@ header {
   .header-navigation li {
     display: inline-block;
     margin-left: 15px; }
-  .header-navigation a {
+  .header-navigation.article-header-navigation li {
+    line-height: initial; }
+  .header-navigation:not(.article-header-navigation) a {
     font-size: 1rem;
     line-height: 40px;
     display: block;
@@ -186,7 +192,7 @@ header {
     padding: 20px; }
 
 .article-header detail {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: block; }
 
 .article-header p {
@@ -212,7 +218,7 @@ header {
   text-align: center;
   font-size: 0; }
   .buttons-wrapper .button {
-    margin: 0 10px; }
+    margin: 0 7px; }
 
 #sidebar {
   padding-left: 40px;

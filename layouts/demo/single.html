@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-		<title>{{ .Params.Title }}</title>
+		<title>Demo &middot; {{ .Params.Title }}</title>
 
 		<meta name="description" content="{{ .Params.Description }}">
 
@@ -23,6 +23,9 @@
 				height: 35px;
 				display: block;
 				float: left;
+				border-right: 1px solid #ccc;
+		 		margin-right: 15px;
+		 		padding-right: 15px;
 			}
 
 			.logo img {
@@ -33,13 +36,17 @@
 		 	.link {
 		 		line-height: 35px;
 		 		display: inline-block;
-		 		border-left: 1px solid #ccc;
-		 		margin-left: 15px;
-		 		padding-left: 15px;
 		 		font-size: 1rem;
 		 		font-family: "Adamina", sans-serif;
 		 		color: #426ec2;
+		 		position: relative;
 		 	}
+
+		 	.bull {
+		 		color: #426ec2;
+		 		margin: 0 6px;
+		 	}
+
 
 		</style>
 		
@@ -51,7 +58,9 @@
 			<a class="logo" href="{{ .Site.BaseURL }}">
 				<img src="https://www.uiplease.com/images/logo3.png" alt="logo">
 			</a>
-			<a class="link" href="{{ .Site.BaseURL }}post/{{ .Params.link }}">Back to Article</a>
+			<a class="link" href="{{ .Site.BaseURL }}post/{{ .Params.link }}">Read Article</a>
+			<span class="bull">&bull;</span>
+			<a class="link" href="{{ .Params.github }}">Source Code</a>
 		</header>
 
 		{{ .Content }}

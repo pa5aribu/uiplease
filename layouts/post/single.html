@@ -36,14 +36,16 @@
 	      <div class="row header-content">
 	        <div class="col-md-4 col-sm-4 col-xs-4">
 	          <a href="{{ .Site.BaseURL }}" class="logo">
-	            <img src="{{ .Site.BaseURL }}images/logo2.png" alt="">
+	            <img src="{{ .Site.BaseURL }}images/logo3.png" alt="uiplease logo">
 	          </a>
 	        </div>
 
 	        <div class="col-md-8 col-sm-8 col-xs-8">
-	          <ul class="header-navigation">
-	            <li><a href="mailto:uiplease@gmail.com">Contact</a></li>
-	            <li><a href="{{ .Site.BaseURL }}about">About</a></li>
+	          <ul class="header-navigation article-header-navigation">
+	            <!-- <li><a href="mailto:uiplease@gmail.com">Contact</a></li>
+	            <li><a href="{{ .Site.BaseURL }}about">About</a></li> -->
+							<li><a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" class="button fb" target="_blank">share via fb</a></li>
+							<li><a href="https://twitter.com/intent/tweet?text=Check%20this%20out!%20{{ .Permalink }}" class="button tw" target="_blank">tweet</a></li>
 	          </ul>
 	        </div>
 	      </div>
@@ -58,7 +60,7 @@
 					<div class="col-md-9 col-sm-12 col-xs-12">
 
 						<div class="article-header">
-							<detail>{{ .Date.Format "January 2, 2006" }}</detail>
+							<detail>Bhakti Al Akbar &bull; {{ .Date.Format "January 2, 2006" }}</detail>
 							<h2>{{ .Title }}</h2>
 							<p>{{ .Description }}</p>
 						</div>
