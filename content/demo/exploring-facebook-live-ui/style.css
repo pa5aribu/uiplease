@@ -7,16 +7,6 @@
 /*google font raleway*/
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-/*css variables*/
-:root {
-  --effect-width: 40px;
-	--bar-size: 3px;
-	--emoji-width: 60px;
-	--effect-position: -80%;
-	--live-pad: 20px;
-	--image-radius: 3px;
-}
-
 body {
 	display: flex;
 	height: 100vh;
@@ -33,8 +23,8 @@ body {
 .live {
 	font-family: Raleway, sans-serif;	
 	position: absolute;
-	top: calc(var(--live-pad) * 1);
-	left: calc(var(--live-pad) * 1);
+	top: calc(20px * 1);
+	left: calc(20px * 1);
   display: inline-block;
   background: red;
   color: #fff;
@@ -81,9 +71,8 @@ body {
 	right: 0;
 	bottom: 0;
 	box-shadow: 0 50px 100px rgba(158, 154, 250, 0.5), 0 15px 35px rgba(158, 154, 250, 0.3), 0 5px 15px rgba(0, 0, 0, 0.1);
-	/*opacity: 0;*/
 	transition: 1s all ease;
-	border-radius: var(--image-radius);
+	border-radius: 3px;
 }
 
 .image-wrapper.active::before,
@@ -93,7 +82,7 @@ body {
 
 .image-wrapper.active img {
 	opacity: 1;
-	border-radius: var(--image-radius);
+	border-radius: 3px;
 }
 
 /*img*/
@@ -111,8 +100,8 @@ body {
 
 /*user*/
 .user {
-	width: var(--effect-width);
-	height: var(--effect-width);
+	width: 40px;
+	height: 40px;
 	background: url("img/emojis-small.svg") no-repeat 0 0;
 	background: url("img/user.jpg") no-repeat center center / cover;
 	border-radius: 50%;
@@ -146,10 +135,10 @@ body {
 /*effect*/
 .emoji-reaction #effect {
 	position: absolute;
-	top: var(--effect-position);
-	left: var(--effect-position);
-	right: var(--effect-position);
-	bottom: var(--effect-position);
+	top: -80%;
+	left: -80%;
+	right: -80%;
+	bottom: -80%;
 }
 
 /*bar wrappepr*/
@@ -158,8 +147,8 @@ body {
 	top: 0;
 	bottom: 0;
 	left: 50%;
-	margin-left: calc(var(--bar-size)/2 * -1);
-	width: var(--bar-size);
+	margin-left: calc(3px/2 * -1);
+	width: 3px;
 	transform-origin: center;
 }
 
@@ -271,8 +260,8 @@ body {
 /*emoji*/
 .emoji {
 	background: url("img/emojis.svg") no-repeat 0 0;
-	width: var(--emoji-width);
-	height: var(--emoji-width);
+	width: 60px;
+	height: 60px;
 	display: inline-block;
 	margin: 0 4px;
 	cursor: pointer;

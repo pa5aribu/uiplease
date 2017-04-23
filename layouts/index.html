@@ -10,8 +10,8 @@
           <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-4">
               <a href="{{ .Site.BaseURL }}" class="logo">
-                <img class="logo-prime" src="{{ .Site.BaseURL }}images/logo.png" alt="Logo 1">
-                <img class="logo-alt" src="{{ .Site.BaseURL }}images/logo3.png" alt="Logo 2">
+                <img class="logo-prime" src="{{ .Site.BaseURL }}images/logo.svg" alt="Logo 1">
+                <img class="logo-alt" src="{{ .Site.BaseURL }}images/logo3.svg" alt="Logo 2">
               </a>
             </div>
 
@@ -33,7 +33,12 @@
       <div class="base-width home-content">
         <!-- <p>A coding playground that explores<br>interactive UI on the web.</p> -->
         <p>Exploring and building modern-<br>interactive UI on the web.</p>
+        <div class="subscribe-wrapper">
+          <input type="email" placeholder="Keep me posted!">
+          <input type="submit" value="Subscribe" class="button">
+        </div>
       </div>
+
     </section>
 
     <section id="works">
@@ -52,7 +57,11 @@
           </a>
           {{ end }}
         </div>
+
+        <div class="pattern">Ul</div>
+
       </div>
+
     </section>
 
     <!--<div class="content container">
@@ -74,6 +83,10 @@
 
       </div>
     </div>-->
+
+  <!-- <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script> -->
+  <!-- <script src="{{ .Site.BaseURL }}/js/TweenMax.min.js"></script> -->
+  <!-- <script src="{{ .Site.BaseURL }}/js/animations.js"></script> -->
 
   </body>
 </html>

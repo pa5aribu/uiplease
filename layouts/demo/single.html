@@ -16,7 +16,29 @@
 			.demo-header {
 				position: fixed;
 				top: 30px;
+				z-index: 9;
 				left: 30px;
+			}
+
+			.demo-header.alt {
+				/*background: rgba(255, 255, 255, .5);*/
+				background: linear-gradient(to right, #fff, transparent);
+				/*background: linear-gradient(to right, rgba(0, 0, 0, .5), transparent);*/
+			  padding: 12px 15px;
+				padding-right: 30px;
+			  top: 30px;
+			  left: 0;
+			  /*transform: scale(.85);*/
+			  /*transform-origin: left center;*/
+			}
+
+			.demo-header.alt .link,
+			.demo-header.alt .bull {
+				color: #333;
+			}
+
+			.demo-header.alt .logo {
+				border-color: #ccc;
 			}
 
 			.logo {
@@ -54,13 +76,18 @@
 
 	<body>
 
-		<header class="demo-header">
+		{{ if eq .Params.headerBg "true" }}
+			<header class="demo-header alt">
+		{{ else }}
+			<header class="demo-header">
+		{{ end }}
+		
 			<a class="logo" href="{{ .Site.BaseURL }}">
-				<img src="https://www.uiplease.com/images/logo3.png" alt="logo">
+				<img src="{{ .Site.BaseURL }}images/logo3.svg" alt="logo">
 			</a>
 			<a class="link" href="{{ .Site.BaseURL }}post/{{ .Params.link }}">Read Article</a>
 			<span class="bull">&bull;</span>
-			<a class="link" href="{{ .Params.github }}">Source Code</a>
+			<a class="link" href="{{ .Params.github }}" target="_blank">Source Code</a>
 		</header>
 
 		{{ .Content }}

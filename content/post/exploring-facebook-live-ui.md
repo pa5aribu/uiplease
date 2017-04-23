@@ -1,14 +1,15 @@
 +++
-date = "2017-04-10T05:30:31+07:00"
 title = "Exploring Facebook Live UI"
+date = "2017-04-10T05:30:31+07:00"
 Description = "Creative approach of facebook live UI interaction"
 thumbnail = "facebook-live-thumb.png"
 poster = "facebook-live-poster.png"
-github = "https://github.com/balapa/uiplease-demos/tree/master/exploring-facebook-live-ui"
+github = "https://github.com/balapa/Facebook-Live-UI"
+disqus_url = "fb cakemper"
 
 +++
 
-On this very first tutorial, I want to explore the Facebook Live UI. Facebook Live is a basic feature that offers live-streaming video capabilities to users. Watchers can also add reaction to the video.
+On this very first post, I want to explore the Facebook Live UI. Facebook Live is a basic feature that offers live-streaming video capabilities to users. Watchers can also add reaction to the video.
 
 I'm using GreenSock TweenMax to control the animation timeline. If you're not familiar with TweenMax, you can learn here https://greensock.com/learning.
 
@@ -107,10 +108,10 @@ Pop in effect style
 	/*effect*/
 	.emoji-reaction #effect {
 		position: absolute;
-		top: var(--effect-position);
-		left: var(--effect-position);
-		right: var(--effect-position);
-		bottom: var(--effect-position);
+		top: -80%;
+		left: -80%;
+		right: -80%;
+		bottom: -80%;
 	}
 
 	/*bar wrappepr*/
@@ -119,8 +120,8 @@ Pop in effect style
 		top: 0;
 		bottom: 0;
 		left: 50%;
-		margin-left: calc(var(--bar-size)/2 * -1);
-		width: var(--bar-size);
+		margin-left: calc(3px/2 * -1);
+		width: 3px;
 		transform-origin: center;
 	}
 
@@ -134,6 +135,10 @@ Pop in effect style
 		right: 0;
 		transform-origin: bottom;
 		transform: scaleY(0);
+	}
+
+	#effect.blue .bar {
+		background: #558DFF;
 	}
 
 	#effect.red .bar {
@@ -152,25 +157,10 @@ Pop in effect style
 
 	/*adding rotation 36deg child after child*/
 	/*this creates the asterisk effect*/
+
 	.bar-wrapper:nth-child(2) {
 		transform: rotate(36deg);
 	}
-
-Pop in effect animation flow
-
-	// animation flow
-	.to(bar, .3, {
-		scaleY: 1,
-		onComplete: function(){
-			// reverse the effect transform origin - from bottom to top
-			// now animation will goes from bottom to top
-			effect.classList.add("reverse");
-		}
-	})
-
-	.to(bar, .3, {
-		scaleY: 0
-	})
 
 #### Wave Animation
 
@@ -223,4 +213,4 @@ Wave animation function
 
 #### Conclusion
 
-I hope you find this exploration inspiring! Consider subscribing to get udpates from me!
+I hope you find this exploration inspiring! If you want to play with the code yourself, feel free to check it out it on <a href="https://github.com/balapa/Facebook-Live-UI">github</a>.
