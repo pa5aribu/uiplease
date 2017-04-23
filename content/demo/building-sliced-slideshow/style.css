@@ -1,0 +1,106 @@
+/*reset*/
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/*css variables*/
+:root {
+	--thumbnail-width: 20px;
+	--thumbnail-height: 3px;
+	--shadow: rgba(0, 0, 0, .25);
+}
+
+html, body {
+	height: 100%;
+	position: relative;
+}
+
+body {
+	background: #000;
+}
+
+#sections-wrapper {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	background: #000;
+}
+
+section {
+	height: 100vh;
+	font-size: 0;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.hide-bottom {
+	transform: translateY(100%);
+}
+
+.hide-top {
+	transform: translateY(-100%);
+}
+
+.segment {
+	height: 100%;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.segment-inner {
+	position: absolute;
+	top: 0;
+	background: no-repeat center center / cover; 
+	height: 100%;
+	width: 100vw;
+}
+
+.sections-control {
+	text-align: center;
+	font-size: 0;
+	position: fixed;
+	right: 25px;
+	bottom: 25px;
+	box-sizing: border-box;;
+}
+
+.section-thumbnail {
+	width: var(--thumbnail-width);
+	height: var(--thumbnail-height);
+	display: block;
+	margin-top: 4px;
+	padding: 4px 0;
+	position: relative;
+	transition: .3s all ease;
+	opacity: .5;
+	cursor: pointer;
+	transform-origin: right top;
+}
+
+.section-thumbnail:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: var(--thumbnail-height);
+	top: 50%;
+	margin-top: calc(var(--thumbnail-height)/2 * -1);
+	background: #fff;
+}
+
+.section-thumbnail:hover {
+	opacity: 1;
+}
+
+.section-thumbnail.active {
+	transform: scaleX(2);
+	opacity: 1;
+}
