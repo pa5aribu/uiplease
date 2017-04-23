@@ -86,7 +86,8 @@
 						{{ .Content }}
 
 						<!-- disqus component -->
-						{{ template "_internal/disqus.html" . }}
+						<!-- {{ template "_internal/disqus.html" . }} -->
+						{{ partial "disqus.html" . }}
 
 					</div>
 					
