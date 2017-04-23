@@ -18,12 +18,13 @@ $Gilroy-Medium: "Gilroy-Medium";
 $Gilroy-Light: "Gilroy-Light";
 $Gilroy-Bold: "Gilroy-Bold";
 
-$kannada-mn: "kannada_mnregular";
+// $kannada-mn: "kannada_mnregular";
 
 @import url('https://fonts.googleapis.com/css?family=Adamina');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
 
 $adamina: "Adamina", sans-serif;
+$raleway: "Raleway", sans-serif;
 
 h1 {
 	color: #000;
@@ -74,34 +75,75 @@ mark {
 	background: #A192FC;
 	color: #fff;
 	padding: 0 5px;
+	// padding-bottom: 2px;
+	zoom: .9;
+
+	&.code {
+		background: #f92672;
+		// #e6db74;
+		// #f92672
+	}
 }
 
 .button {
-	padding: 11.5px 18px;
-	border-radius: 3px;
+	padding: 0 18px;
+	line-height: 40px;
 	font-size: .9rem;
 	letter-spacing: 1.2px;
 	color: #fff;
 	background: #426ec2;
 	display: inline-block;
-	font-family: "Raleway";
+	font-family: $raleway;
 	text-transform: uppercase;
 	font-weight: 400;
-	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	// box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	box-shadow: -3px 10px 25px 0px rgba(50, 50, 93, .25);
+	transition: .3s all ease;
+	cursor: pointer;
 
-	&.alt {
+	&.download {
 		background: #32325D;
+	}
+
+	&.github {
+		background: #F4F6F8;
+		color: #24292e;
 	}
 
 	&.fb {
 		background: #3b5998;
+
+		.icon {
+			background-position: 0 0;
+		}
 	}
 
 	&.tw {
 		background: #55acee;
+
+		.icon {
+			background-position: -38px 0;
+			width: 48px;
+		}
+	}
+
+	&:hover {
+		opacity: .8;
+	}
+
+	// icon
+	.icon {
+		background: url(../../images/socials.svg) no-repeat;
+		width: 21px;
+		height: 40px;
+		display: block;
+		zoom: .5;
+		float: left;
+    -moz-transform: scale(.5);
+    -moz-transform-origin: left;
+    margin-right: 25px;
 	}
 }
-
 
 li {
 	font-size: 1rem;
@@ -127,7 +169,7 @@ ol li::before {
 }
 
 #works {
-	margin-bottom: 50px;
+	padding-bottom: 70px;
 }
 
 @media (max-width: 767px) {
@@ -144,9 +186,14 @@ ol li::before {
 #about {
 	box-sizing: border-box;
 
+	a {
+		color: #426ec2;
+		text-decoration: underline;
+	}
+
 	.logo {
 		// margin: 0 auto 25px;
-		margin-bottom: 25px;
+		margin-bottom: 30px;
 		display: block;
 		width: 160px;
 
@@ -168,6 +215,6 @@ ol li::before {
 .about-content {
 	padding: 40px;
 	background: #fff;
-	box-shadow: -20px 15px 50px 0px rgba(50, 50, 93, 0.05), -20px 20px 35px rgba(50, 50, 93, 0.15);
+	box-shadow: -35px 35px 50px 0px rgba(50, 50, 93, 0.15), -20px 20px 35px rgba(50, 50, 93, 0.05);
 	// border: 1px solid #f5f5f5;
 }

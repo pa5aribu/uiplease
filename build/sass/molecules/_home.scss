@@ -1,5 +1,7 @@
 #home {
-	margin-bottom: 60px;
+	// margin-bottom: 70px;
+	padding-bottom: 80px;
+	position: relative;
 
 	p {
 		color: #91a2b0;
@@ -7,5 +9,77 @@
 
 	p {
 		font-size: 2rem;
+	}
+}
+
+.subscribe-wrapper {
+	margin-top: 30px;
+	display: flex;
+
+	input {
+		line-height: 40px;
+	}
+
+	$submitColor: #3ECF8E;
+
+	[type="email"] {
+		border: 1px solid #ccc;
+		font-size: 0.9rem;
+		padding: 0 15px;
+		font-family: $adamina;
+		color: #777;
+		transition: .3s all ease;
+	}
+
+	[type="email"]:focus {
+		border-color: #555;
+	}
+
+	[type="submit"] {
+		border: 1px solid $submitColor;
+		background: $submitColor;
+		padding: 0 15px;
+		margin-left: 15px;
+		// box-shadow: -3px 10px 25px 0px rgba(50, 50, 93, .25);
+	}
+}
+
+@media (max-width: 480px) {
+
+	.subscribe-wrapper {
+		justify-content: space-between;
+
+		[type="email"] {
+			width: 55%;
+		}
+
+		[type="submit"] {
+			width: 40%;
+			font-size: .8rem;
+		}
+	}
+}
+
+#works .base-width {
+	position: relative;
+
+	.pattern {
+		position: absolute;
+		top: -284px;
+		right: 0;
+		bottom: 0;
+		font-size: 500px;
+		text-align: center;
+		color: #F6F9FC;
+		z-index: -1;
+		display: none;
+		// text-shadow: -15px -15px 50px rgba(50, 50, 93, 0.15);
+	}
+}
+
+@media (min-width: 768px) {
+
+	#works .base-width .pattern {
+		display: block;
 	}
 }

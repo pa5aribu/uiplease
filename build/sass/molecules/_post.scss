@@ -1,14 +1,6 @@
 #post {
 	margin-bottom: 100px;
 
-	// h2 {
-	// 	margin-bottom: 5px;
-	// }
-
-	// p {
-	// 	color: #000;
-	// }
-
 	p {
 		font-size: 1.1rem;
 		line-height: 1.75;
@@ -55,6 +47,11 @@
 	code {
 		padding: 20px;
 	}
+
+
+	.buttons-wrapper {
+		margin-bottom: 40px;
+	}
 }
 
 .article-header {
@@ -67,6 +64,14 @@
 	p {
 		font-size: 1.25rem;
 		color: rgba(0, 0, 0, .4);
+	}
+
+	.button {
+		display: flex;
+
+		.icon {
+			align-self: center;
+		}
 	}
 }
 
@@ -81,18 +86,58 @@ $imagePad: 40px;
 	}
 }
 
+@media (max-width: 767px) {
+
+	#post img {
+		margin-left: -20px !important;
+		width: calc(100% + 40px) !important;
+	}
+
+	#post pre,
+	#post .buttons-wrapper {
+    margin-left: -20px;
+    margin-right: -20px;
+	}
+
+	#post .button {
+		font-size: 0.7rem;
+	}
+
+	.buttons-wrapper .button {
+		margin: 0 4px;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.article-header .button {
+
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		.icon {
+			margin: 0;
+		}
+
+		.text {
+			display: none;
+		}
+	}
+
+	.remove-on-mobile {
+		display: none;
+	}
+
+}
+
 .img-header-wrapper {
-	margin: 30px 0 60px;
+	margin: 30px 0 40px;
 
 	.img-header {
 		width: 100%;
 		display: block;
 		position: relative;
 		box-shadow: -20px 15px 50px 0px rgba(50, 50, 93, 0.05), -20px 20px 35px rgba(50, 50, 93, 0.15);
-	}
-
-	.buttons-wrapper {
-		margin-top: 40px;
 	}
 }
 
