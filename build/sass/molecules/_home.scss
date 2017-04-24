@@ -1,3 +1,14 @@
+.madeby {
+	@include fixed(bottom 20px right 20px);
+	background: #55acee;
+	padding: 5px 8px;
+	border-radius: 3px;
+	color: #fff;
+	font-family: $raleway;
+	font-size: .8rem;
+	box-shadow: -2px 5px 15px 0px rgba(50, 50, 93, 0.25);
+}
+
 #home {
 	// margin-bottom: 70px;
 	padding-bottom: 80px;
@@ -12,8 +23,12 @@
 	}
 }
 
+.form-detail {
+	margin: 30px 0 10px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
 .subscribe-wrapper {
-	margin-top: 30px;
 	display: flex;
 
 	input {
