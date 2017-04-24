@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "uiplease is a web that explores interactive ui on the web",
   "scripts": {
-    "sass": "node-sass -w --source-map true build/sass/main.scss -o static/css/"
+    "sass": "node-sass -w --source-map true build/sass/main.scss -o static/css/ --output-style compressed"
   },
   "author": "balapa",
   "license": "ISC",
