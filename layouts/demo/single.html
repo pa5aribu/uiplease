@@ -2,12 +2,35 @@
 <html>
 	<head>
 		
-		<title>Demo &middot; {{ .Params.Title }}</title>
+		<title>{{ .Title }} &middot; Demo</title>
 
-		<meta name="description" content="{{ .Params.Description }}">
-
-		<link rel="icon" href="{{ .Site.BaseURL }}images/favicon.ico">
+		<!-- css -->
 		<link rel="stylesheet" href="style.css">
+
+		<!-- meta tags -->
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	  <!-- meta for google -->
+		<meta name="description" content="{{ .Description }}">
+		<meta name="keywords" content="html, css, javascript, ui, ux, ui/ux, animation, interaction, coding, design">
+		<meta name="author" content="Bhakti Al Akbar">
+
+		<!-- meta for fb -->          
+		<meta property="og:type" content="article">
+		<meta property="og:url" content=" {{ .Permalink }}">
+		<meta property="og:title" content="{{ .Title }}">
+		<meta property="og:description" content="{{ .Description }}">
+	  <meta property="og:image" content="{{ .Site.BaseURL }}images/posters/{{ .Params.poster }}">
+
+		<!-- meta for twitter -->          
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="{{ .Title }}">
+		<meta name="twitter:description" content="{{ .Description }}">
+		<meta name="twitter:image" content="{{ .Site.BaseURL }}images/posters/{{ .Params.poster }}">
+
+		<!-- favicon -->
+	  <link rel="icon" href='{{ "images/favicon.ico" | absURL }}'>
 
 		<style>
 
@@ -21,15 +44,11 @@
 			}
 
 			.demo-header.alt {
-				/*background: rgba(255, 255, 255, .5);*/
 				background: linear-gradient(to right, #fff, transparent);
-				/*background: linear-gradient(to right, rgba(0, 0, 0, .5), transparent);*/
 			  padding: 12px 15px;
 				padding-right: 30px;
 			  top: 30px;
 			  left: 0;
-			  /*transform: scale(.85);*/
-			  /*transform-origin: left center;*/
 			}
 
 			.demo-header.alt .link,
@@ -81,11 +100,12 @@
 		{{ else }}
 			<header class="demo-header">
 		{{ end }}
-		
+
 			<a class="logo" href="{{ .Site.BaseURL }}">
 				<img src="{{ .Site.BaseURL }}images/logo3.svg" alt="logo">
 			</a>
-			<a class="link" href="{{ .Site.BaseURL }}post/{{ .Params.link }}">Read Article</a>
+			<a class="link" href='{{ replace .Permalink "demo" "post" }}'>Read Article</a>
+
 			<span class="bull">&bull;</span>
 			<a class="link" href="{{ .Params.github }}" target="_blank">Source Code</a>
 		</header>

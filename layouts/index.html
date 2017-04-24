@@ -10,15 +10,15 @@
           <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-4">
               <a href="{{ .Site.BaseURL }}" class="logo">
-                <img class="logo-prime" src="{{ .Site.BaseURL }}images/logo.svg" alt="Logo 1">
-                <img class="logo-alt" src="{{ .Site.BaseURL }}images/logo3.svg" alt="Logo 2">
+                <img class="logo-prime" src='{{ "images/logo.svg" | relURL }}' alt="Logo 1">
+                <img class="logo-alt" src='{{ "images/logo3.svg" | relURL }}' alt="Logo 2">
               </a>
             </div>
 
             <div class="col-md-8 col-sm-8 col-xs-8">
               <ul class="header-navigation">
                 <li><a href="mailto:uiplease@gmail.com">Contact</a></li>
-                <li><a href="{{ .Site.BaseURL }}about">About</a></li>
+                <li><a href='{{ "about" | relURL }}'>About</a></li>
               </ul>
             </div>
           </div>
@@ -31,13 +31,17 @@
 
     <section id="home">
       <div class="base-width home-content">
-        <!-- <p>A coding playground that explores<br>interactive UI on the web.</p> -->
         <p>Exploring and building modern-<br>interactive UI on the web.</p>
-        <div class="subscribe-wrapper">
-          <input type="email" placeholder="Keep me posted!">
-          <input type="submit" value="Subscribe" class="button">
-        </div>
-      </div>
+        <div class="form-detail">Subscribe to get new experiment in your inbox!</div>
+        
+        <!-- mailchimp form -->
+        <form class="subscribe-wrapper" action="//balapa.us8.list-manage.com/subscribe/post?u=074a5f521f440ccfa7bacb4e3&amp;id=8a4070226e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+          <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Enter email address" required>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_074a5f521f440ccfa7bacb4e3_8a4070226e" tabindex="-1" value="">
+          </div>
+          <input class="button" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+        </form>
 
     </section>
 
@@ -64,29 +68,7 @@
 
     </section>
 
-    <!--<div class="content container">
-      <div class="posts">
-
-        {{ range .Data.Pages }}
-        <div class="post">
-          <h1 class="post-title">
-            <a href="{{ .Permalink }}">
-              {{ .Title }}
-            </a>
-          </h1>
-
-          <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-
-          {{ .Content }}
-        </div>
-        {{ end }}
-
-      </div>
-    </div>-->
-
-  <!-- <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script> -->
-  <!-- <script src="{{ .Site.BaseURL }}/js/TweenMax.min.js"></script> -->
-  <!-- <script src="{{ .Site.BaseURL }}/js/animations.js"></script> -->
+    <a href="https://twitter.com/balapazz" class="madeby">by @balapazz</a>
 
   </body>
 </html>

@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 	<head>
-	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-	  <meta property="og:image" content="{{ .Site.BaseURL }}images/posters/facebook-live-poster.png">
 
-	  <!-- Enable responsiveness on mobile devices-->
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-	  {{ if .IsHome }}
+		{{ if .IsHome }}
 	  <title>{{ .Site.Title }}</title>
 	  {{ else }}
 	  <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
 	  {{ end }}
 
-	  <!-- CSS -->
-	  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/flexboxgrid.css">
-	  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/reset.css">
-	  <!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fonts.min.css"> -->
-	  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
-
-	  <link rel="icon" href="{{ .Site.BaseURL }}images/favicon.ico">
-
+	  <!-- css -->
+	  <link rel="stylesheet" href='{{ "css/flexboxgrid.css" | relURL }}'>
+    <link rel="stylesheet" href='{{ "css/reset.css" | relURL }}'>
+    <link rel="stylesheet" href='{{ "css/main.css" | relURL }}'>
 	  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
+
+		<!-- meta tags -->
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+	  <!-- meta for google -->
+		<meta name="description" content="{{ .Description }}">
+		<meta name="keywords" content="html, css, javascript, ui, ux, ui/ux, animation, interaction, coding, design">
+		<meta name="author" content="Bhakti Al Akbar">
+
+		<!-- meta for fb -->          
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="{{ .Site.BaseURL }}post/{{ .File.BaseFileName }}">
+		<meta property="og:title" content="{{ .Title }}">
+		<meta property="og:description" content="{{ .Description }}">
+	  <meta property="og:image" content="{{ .Site.BaseURL }}images/posters/{{ .Params.poster }}">
+
+		<!-- meta for twitter -->          
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="{{ .Title }}">
+		<meta name="twitter:description" content="{{ .Description }}">
+		<meta name="twitter:image" content="{{ .Site.BaseURL }}images/posters/{{ .Params.poster }}">
+
+		<!-- favicon -->
+	  <link rel="icon" href='{{ "images/favicon.ico" | absURL }}'>
+	
+		<!-- highlight js -->
 	  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 	  <script>hljs.initHighlightingOnLoad();</script>
 
@@ -36,7 +54,7 @@
 	      <div class="row header-content">
 	        <div class="col-md-4 col-sm-4 col-xs-4">
 	          <a href="{{ .Site.BaseURL }}" class="logo">
-	            <img src="{{ .Site.BaseURL }}images/logo3.svg" alt="uiplease logo">
+	            <img src='{{ "images/logo3.svg" | absURL }}' alt="uiplease logo">
 	          </a>
 	        </div>
 
@@ -86,7 +104,6 @@
 						{{ .Content }}
 
 						<!-- disqus component -->
-						<!-- {{ template "_internal/disqus.html" . }} -->
 						{{ partial "disqus.html" . }}
 
 					</div>
