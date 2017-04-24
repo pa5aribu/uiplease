@@ -17,7 +17,7 @@
 
             <div class="col-md-8 col-sm-8 col-xs-8">
               <ul class="header-navigation">
-                <li><a href="mailto:uiplease@gmail.com">Contact</a></li>
+                <li><a href="mailto:uiplease@gmail.com">Sponsor</a></li>
                 <li><a href='{{ "about" | relURL }}'>About</a></li>
               </ul>
             </div>
@@ -32,7 +32,7 @@
     <section id="home">
       <div class="base-width home-content">
         <p>Exploring and building modern-<br>interactive UI on the web.</p>
-        <div class="form-detail">Subscribe to get new experiment in your inbox!</div>
+        <div class="form-detail">Subscribe to get new experiment in your inbox weekly!</div>
         
         <!-- mailchimp form -->
         <form class="subscribe-wrapper" action="//balapa.us8.list-manage.com/subscribe/post?u=074a5f521f440ccfa7bacb4e3&amp;id=8a4070226e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
@@ -57,9 +57,15 @@
               <h3>{{ .Title }}</h3>
               <detail>{{ .Date.Format "January 2, 2006" }}</detail>
 
-            </div>
-          </a>
+            </a>
+          </div>
+
           {{ end }}
+          <div class="col col-md-4 col-sm-4 col-xs-12">
+            <div class="next-box">
+              <p>I explore new experiment weekly, subscribe to get notified!</p>
+            </div>
+          </div>
         </div>
 
         <div class="pattern">Ul</div>
@@ -69,6 +75,8 @@
     </section>
 
     <a href="https://twitter.com/balapazz" class="madeby">by @balapazz</a>
+
+    <script src='{{ "js/interaction.js" | relURL }}'></script>
 
   </body>
 </html>
