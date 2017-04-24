@@ -181,6 +181,18 @@ header {
     font-family: "Adamina", sans-serif;
     color: #000; }
 
+.madeby {
+  right: 20px;
+  bottom: 20px;
+  position: fixed;
+  background: #55acee;
+  padding: 5px 8px;
+  border-radius: 3px;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: .8rem;
+  box-shadow: -2px 5px 15px 0px rgba(50, 50, 93, 0.25); }
+
 #home {
   padding-bottom: 80px;
   position: relative; }
@@ -189,8 +201,11 @@ header {
   #home p {
     font-size: 2rem; }
 
+.form-detail {
+  margin: 30px 0 10px;
+  color: rgba(0, 0, 0, 0.5); }
+
 .subscribe-wrapper {
-  margin-top: 30px;
   display: flex; }
   .subscribe-wrapper input {
     line-height: 40px; }
