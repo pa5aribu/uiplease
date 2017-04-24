@@ -210,6 +210,6 @@ Wave animation function
 		
 	}
 
-#### Conclusion
+#### Final Words
 
-I hope you find this exploration inspiring! If you want to play with the code yourself, feel free to check it out it on <a href="https://github.com/balapa/Facebook-Live-UI">github</a>.
+I hope you find this exploration inspiring! If you want to play with the code yourself, feel free to check it out on <a href="https://github.com/balapa/Facebook-Live-UI">GitHub</a>. Also consider <a href="https://www.uiplease.com">subscribing</a>  to get notified!.
