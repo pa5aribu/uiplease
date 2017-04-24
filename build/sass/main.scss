@@ -57,11 +57,18 @@ body {
 	position: relative;
 	display: block;
 
+	$transalateGap: -10px;
+
+	&:hover .thumbnail {
+		transform: translate($transalateGap, $transalateGap);
+	}
+
 	h3 {
 		margin: 20px 0 5px;
 	}
 
 	.thumbnail {
 		width: 100%;
+		transition: .3s all ease;
 	}
 }

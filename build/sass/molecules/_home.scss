@@ -1,6 +1,6 @@
 .madeby {
 	@include fixed(bottom 20px right 20px);
-	background: #55acee;
+	background: #000;
 	padding: 5px 8px;
 	border-radius: 3px;
 	color: #fff;
@@ -10,7 +10,6 @@
 }
 
 #home {
-	// margin-bottom: 70px;
 	padding-bottom: 80px;
 	position: relative;
 
@@ -21,6 +20,7 @@
 	p {
 		font-size: 2rem;
 	}
+
 }
 
 .form-detail {
@@ -33,9 +33,18 @@
 
 	input {
 		line-height: 40px;
+		border-radius: 0;
 	}
 
 	$submitColor: #3ECF8E;
+
+	.error {
+		border-color: #e74c3c !important;
+	}
+
+	.success {
+		border-color: $submitColor !important;
+	}
 
 	[type="email"] {
 		border: 1px solid #ccc;
@@ -55,7 +64,6 @@
 		background: $submitColor;
 		padding: 0 15px;
 		margin-left: 15px;
-		// box-shadow: -3px 10px 25px 0px rgba(50, 50, 93, .25);
 	}
 }
 
@@ -72,6 +80,22 @@
 			width: 40%;
 			font-size: .8rem;
 		}
+	}
+}
+
+#works {
+
+	.next-box {
+    border: 2px solid #eee;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+
+    p {
+    	align-self: center;
+    	text-align: center;
+    	width: 100%;
+    }
 	}
 }
 
@@ -97,4 +121,10 @@
 	#works .base-width .pattern {
 		display: block;
 	}
+
+  #works .next-box {
+  	height: calc(100% - 66px);
+  	padding: 20px 30px;
+  }
+
 }
