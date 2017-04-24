@@ -171,7 +171,7 @@ We can interact with the slideshow using arrow keys (up, down, right, left) and 
 		})
 	});
 
-The animateSegments function takes two arguments. First is the hidden section that we want to animate so it can be visible, and the second is basically a boolean variable that indicates whether the function is requested by click (using buttons) or arrow key. Read the code below to understand how it works.
+The animateSegments function takes two arguments. First is the hidden section that we want to animate so it can be visible, and the second is basically a boolean variable that indicates whether the function is requested by click (using buttons) or arrow key.
 
 	// animate the section's segments
 	// first param is the next hidden section
@@ -282,6 +282,8 @@ The animateSegments function takes two arguments. First is the hidden section th
 			targets: animationParams.targets,
 			translateY: translateYValue,
 			duration: animationSettings.duration,
+			// each segment has higher delay depends on its index
+			// the higher its index, the longer its delay
 			delay: function(el, index) {
 				return index * animationSettings.delay;
 			},
@@ -293,4 +295,4 @@ The animateSegments function takes two arguments. First is the hidden section th
 
 #### Final Words
 
-I hope you find this exploration inspiring! If you want to play with the code yourself, feel free to check it out it on <a href="https://github.com/balapa/Sliced-Slideshow">github</a>.
+I hope you find this exploration inspiring! If you want to play with the code yourself, feel free to check it out on <a href="https://github.com/balapa/Sliced-Slideshow">GitHub</a>.
