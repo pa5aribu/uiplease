@@ -1,11 +1,10 @@
 +++
 title = "Exploring Facebook Live UI"
 date = "2017-04-10T05:30:31+07:00"
-Description = "Creative approach of facebook live UI interaction"
+description = "Creative approach of facebook live UI interaction"
 thumbnail = "facebook-live-thumb.png"
 poster = "facebook-live-poster.png"
 github = "https://github.com/balapa/Facebook-Live-UI"
-disqus_url = "fb cakemper"
 
 +++
 

@@ -1,11 +1,10 @@
 +++
 title = "Building Sliced Slideshow"
 date = "2017-04-23T04:17:49+07:00"
-Description = "Interactive slideshow with animated sliced segments"
+description = "Interactive slideshow with animated sliced segments"
 thumbnail = "sliced-slideshow-thumb.png"
 poster = "sliced-slideshow-poster.png"
 github = "https://github.com/balapa/Sliced-Slideshow"
-disqus_url = "encakemper lol"
 
 +++
 
