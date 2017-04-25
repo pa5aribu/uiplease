@@ -10,7 +10,7 @@ github = "https://github.com/balapa/Facebook-Live-UI"
 
 On this very first post, I want to explore the Facebook Live UI. Facebook Live is a basic feature that offers live-streaming video capabilities to users. Watchers can also add reaction to the video.
 
-I'm using GreenSock TweenMax to control the animation timeline. If you're not familiar with TweenMax, you can learn here https://greensock.com/learning.
+I use GreenSock TweenMax to control the animation timeline. If you're not familiar with TweenMax, you can learn here https://greensock.com/learning.
 
 #### Preload Animation
 
