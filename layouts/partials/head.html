@@ -5,7 +5,7 @@
     {{ $tagline := "Learn how to build UI animation in CSS, SVG/Canvas, and JS" }}
 
     {{ if .IsHome }}
-    <title>{{ .Site.Title }} &middot; </title>
+    <title>{{ .Site.Title }} &middot; {{ $tagline }}</title>
     {{ else }}
     <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
     {{ end }}
