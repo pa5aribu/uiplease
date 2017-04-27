@@ -1,6 +1,7 @@
 +++
-title = "Building Sliced Slideshow"
 date = "2017-04-23T04:17:49+07:00"
+title = "Building Sliced Slideshow"
+categories = ["experiment", "slideshow"]
 description = "Interactive slideshow with animated sliced segments"
 thumbnail = "sliced-slideshow-thumb.png"
 poster = "sliced-slideshow-poster.png"
@@ -55,7 +56,7 @@ As you can see from the above code, we wrap all slides into <mark class="code">#
 
 #### The sliced segments effect
 
-Alright, here's the interesting part. So originally the effect from <a href="http://jetlag.photos">jetlag.photos</a> is created with HTML Canvas. But I wanted to it with CSS. So how does it work?
+Alright, here's the interesting part. So originally the effect from <a href="http://jetlag.photos">jetlag.photos</a> was created with HTML Canvas. But I wanted to it with CSS. So how does it work?
 
 We generate a handful of segments (in our demo, it is 20 segments) and append them into the slide section. These segments are lined up so they look like a bunch of columns. We also set the width to be divided by 100 by the amount of segments.
 
@@ -83,7 +84,7 @@ Here's the JavaScript code
 
 Here's the generated segments markup
 
-![Example image](/images/articles/building-sliced-slideshow/1.png)
+![image](/images/articles/building-sliced-slideshow/1.png)
 
 On the segment element, we have a child element which is <mark class="code">.segment-inner</mark> that contains the background image. We grab the section's <mark>data-img</mark> as the background URL. The <mark class="code">.segment-inner</mark> is also positioned absolute and has the same width and height as the sections-wrapper.
 
