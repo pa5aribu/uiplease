@@ -81,6 +81,18 @@
 			font-size: .8rem;
 		}
 	}
+
+	header {
+		margin: 30px auto 60px;
+	}
+
+	#home p {
+		font-size: 1.5rem;
+
+		br {
+			display: none;
+		}
+	}
 }
 
 #works {

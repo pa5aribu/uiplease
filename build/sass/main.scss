@@ -40,7 +40,9 @@ body {
 @media (min-width: 1055px) {
 	
 	.wrapper-3 {
-		margin: 0 -40px;
+    width: calc(100% + 70px);
+    left: -40px;
+    position: relative;
 	}	
 
 }
