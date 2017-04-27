@@ -14,7 +14,7 @@
     <link rel="stylesheet" href='{{ "css/main.css" | relURL }}'>
 	  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/monokai-sublime.min.css">
 
-		<!-- meta tags -->
+		<!-- meta categories -->
 	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
@@ -46,51 +46,52 @@
 	</head>
 
 	<body>
-
+		<!-- article header -->
 		<header class="article-header">
 
-    	<div class="base-width">
+			<div class="base-width post-width">
 
-	      <div class="row header-content">
-	        <div class="col-md-4 col-sm-4 col-xs-4">
-	          <a href="{{ .Site.BaseURL }}" class="logo">
-	            <img src='{{ "images/logo3.svg" | absURL }}' alt="uiplease logo">
-	          </a>
-	        </div>
+		    <div class="row header-content">
+		      <div class="col-md-4 col-sm-4 col-xs-4">
+		        <a href="{{ .Site.BaseURL }}" class="logo">
+		          <img src='{{ "images/logo3.svg" | absURL }}' alt="uiplease logo">
+		        </a>
+		      </div>
 
-	        <div class="col-md-8 col-sm-8 col-xs-8">
-	          <ul class="header-navigation article-header-navigation">
-							<li>
-								<a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" class="button fb" target="_blank">
-									<span class="icon"></span>
-									<span class="text">share</span>
-								</a>
-							</li>
-							<li>
-								<a href="https://twitter.com/intent/tweet?text=Check%20this%20out!%20{{ .Permalink }}" class="button tw" target="_blank">
-									<span class="icon"></span>
-									<span class="text">tweet</span>
-								</a>
-							</li>
-	          </ul>
-	        </div>
-	      </div>
-    		
-    	</div>
+		      <div class="col-md-8 col-sm-8 col-xs-8">
+		        <ul class="header-navigation article-header-navigation">
+					<li>
+						<a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" class="button fb" target="_blank">
+							<span class="icon"></span>
+							<span class="text">share</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/intent/tweet?text=Check%20this%20out!%20{{ .Permalink }}" class="button tw" target="_blank">
+							<span class="icon"></span>
+							<span class="text">tweet</span>
+						</a>
+					</li>
+		        </ul>
+		      </div>
+		    </div>
+				
+			</div>
 
-	  </header>
-
+		</header>
+		
+		<!-- article -->
 		<article id="post">
-			<div class="base-width article-content">
-				<div class="row around-md">
-					<div class="col-md-9 col-sm-12 col-xs-12">
-
+			<div class="base-width post-width article-content">
+				<div class="row">
+					<div class="col-md-8 col-sm-8 col-xs-12">
+		
 						<div class="article-header">
 							<detail>Bhakti Al Akbar &bull; {{ .Date.Format "January 2, 2006" }}</detail>
 							<h2>{{ .Title }}</h2>
 							<p>{{ .Description }}</p>
 						</div>
-
+		
 						<figure class="img-header-wrapper">
 							<img class="img-header" src="{{ .Site.BaseURL }}images/posters/{{ .Params.poster }}">
 						</figure>
@@ -102,15 +103,53 @@
 						
 						<!-- content -->
 						{{ .Content }}
-
+		
 						<!-- disqus component -->
 						{{ partial "disqus.html" . }}
-
+		
+					</div>
+		
+					<div class="col-md-4 col-md-4 col-xs-12 sidebar-content-wrapper">
+						<!-- sidebar content -->
+						<div id="sidebar-content">
+		
+							<h4>Newsletter</h4>
+							<p>Subscribe to get new experiment in your inbox weekly!</p>
+							<form class="subscribe-wrapper" action="//balapa.us8.list-manage.com/subscribe/post?u=074a5f521f440ccfa7bacb4e3&amp;id=8a4070226e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+			          <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Enter email" required>
+			          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+			            <input type="text" name="b_074a5f521f440ccfa7bacb4e3_8a4070226e" tabindex="-1" value="">
+			          </div>
+			          <input class="button" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+			        </form>
+		
+			        {{ range first 1 (where (where .Site.Pages ".Params.categories" "intersect" .Params.categories) "Permalink" "!=" .Permalink) }}
+							  {{ $.Scratch.Set "has_related" true }}
+						  {{ end }}
+		
+						  {{ if $.Scratch.Get "has_related" }}
+					    <ul class="related-posts">
+					      {{ $num_to_show := .Site.Params.related_content_limit | default 7 }}
+					      {{ range first $num_to_show (where (where .Site.Pages ".Params.categories" "intersect" .Params.categories) "Permalink" "!=" .Permalink) }}
+					        <li class="related-post">
+					        	<a href="{{ .RelPermalink }}">
+						        	{{ with .Params.thumbnail }}
+					        			<img class="related-image" src="../../images/thumbnails/{{ . }}" alt="">
+						        	{{ end }}
+					        		<span class="related-title">{{ .Title }}</span>
+					        	</a>
+					        </li>
+					      {{ end }}
+					    </ul>
+						  {{ end }}
+		
+						</div>
 					</div>
 					
 				</div>
 			</div>
 		</article>
-
+		
+		<script src='{{ "js/interaction.js" | relURL }}'></script>
 	</body>
 </html>
