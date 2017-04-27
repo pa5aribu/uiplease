@@ -5,7 +5,11 @@
 		<title>{{ .Title }} &middot; Demo</title>
 
 		<!-- css -->
-		<link rel="stylesheet" href="style.css">
+		{{ if eq .Params.notIndex "true" }}
+			<link rel="stylesheet" href="../style.css">
+		{{ else }}
+			<link rel="stylesheet" href="style.css">
+		{{ end }}
 
 		<!-- meta tags -->
 	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -88,6 +92,37 @@
 		 		margin: 0 6px;
 		 	}
 
+		 	.versions {
+		 		position: fixed;
+		 		right: 20px;
+		 		bottom: 20px;
+		 		z-index: 9;
+		 		display: flex;
+		 	}
+
+		 	.versions li {
+		 		list-style-type: none;
+		 		padding: 0;
+		 		margin-left: 10px;
+		 	}
+
+		 	.versions a {
+		 		display: block;
+		 		font-family: "Adamina", sans-serif;
+		 		font-size: .85rem;
+		 		color: #777;
+		 		text-decoration: none;
+		 	}
+
+		 	.versions a.active {
+		 		color: #426ec2;
+		 	}
+
+		 	.divider {
+		 		color: #ccc;
+		 		top: 2px;
+		 		position: relative;
+		 	}
 
 		</style>
 		
@@ -104,10 +139,14 @@
 			<a class="logo" href="{{ .Site.BaseURL }}">
 				<img src="{{ .Site.BaseURL }}images/logo3.svg" alt="logo">
 			</a>
-			<a class="link" href='{{ replace .Permalink "demo" "post" }}'>Read Article</a>
-
+			{{ $newPermalink := replace .Permalink "demo" "post" }}
+			{{ if eq .Params.notIndex "true" }}
+				<a class="link" href='{{ replace $newPermalink "/2" "" }}'>Read Article</a>
+			{{ else }}
+				<a class="link" href='{{ $newPermalink }}'>Read Article</a>
+			{{ end }}
 			<span class="bull">&bull;</span>
-			<a class="link" href="{{ .Params.github }}" target="_blank">Source Code</a>
+			<a class="link" href="{{ .Params.github }}" target="_blank">See on GitHub</a>
 		</header>
 
 		{{ .Content }}
