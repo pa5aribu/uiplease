@@ -5,11 +5,47 @@ header {
 	// article header
 	&.article-header {
 		margin-top: 0;
-		margin-bottom: 70px;
+	  margin-bottom: 70px;
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	  background: rgba(255, 255, 255, .85);
+	  z-index: 9;
 
 		.header-content {
-			border-bottom: 1px solid #eee;
-			padding: 30px 0;
+			// border-bottom: 1px solid #eee;
+			padding: 20px 0;
+	    position: relative;
+	    z-index: 9;
+	    background: #fff;
+		}
+
+		.logo,
+		.header-navigation {
+			position: relative;
+	    z-index: 9;
+		}
+
+		.header-content:before {
+	    content: "";
+			position: absolute;
+			top: 0;
+			left: -60px;
+			right: 0;
+			bottom: 0;
+			box-shadow: -3px 10px 25px 0px rgba(50,50,93,0.1);
+			z-index: -2;
+		}
+
+		.header-content:after {
+	    content: "";
+	    position: absolute;
+	    top: 0;
+	    left: -100px;
+	    right: -20px;
+	    bottom: 0;
+	    background: #fff;
+	    z-index: 0;
 		}
 	}
 
@@ -40,7 +76,13 @@ header {
 	.logo-alt.logo-alt.logo-alt {
 		display: block;
 	}
+
+	.header-content:before {
+		left: 0 !important;
+	}
 }
+
+// @media (min-width: )
 
 .header-navigation {
 	text-align: right;
