@@ -87,7 +87,12 @@
 					<div class="col-md-8 col-sm-7 col-xs-12">
 		
 						<div class="article-header">
-							<detail>Bhakti Al Akbar &bull; {{ .Date.Format "January 2, 2006" }}</detail>
+						
+							<div class="author-info">
+								<img class="author-picture" src="{{ .Site.BaseURL }}images/bhakti.jpg" alt="Author">
+								<detail>Bhakti Al Akbar &bull; {{ .Date.Format "January 2, 2006" }}</detail>
+							</div>
+
 							<h2>{{ .Title }}</h2>
 							<p>{{ .Description }}</p>
 						</div>
@@ -116,7 +121,7 @@
 							<h4>Newsletter</h4>
 							<p>Subscribe to get new experiment in your inbox weekly!</p>
 							<form class="subscribe-wrapper" action="//balapa.us8.list-manage.com/subscribe/post?u=074a5f521f440ccfa7bacb4e3&amp;id=8a4070226e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-			          <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Enter email" required>
+			          <input autocomplete="off" type="email" name="EMAIL" id="mce-EMAIL" placeholder="Enter email" required>
 			          <div style="position: absolute; left: -5000px;" aria-hidden="true">
 			            <input type="text" name="b_074a5f521f440ccfa7bacb4e3_8a4070226e" tabindex="-1" value="">
 			          </div>
