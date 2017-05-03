@@ -128,6 +128,89 @@
 	}
 }
 
+$stackWidth: 130px;
+$stackHeight: 160px;
+$translateGap: 20px;
+
+.stack-cards {
+	width: $stackWidth;
+	height: $stackHeight;
+	position: relative;
+	margin: 0 auto;
+
+	.card {
+		@include absolute(top 0 right 0 bottom 0 left 0);
+		background: red;
+		padding: 15px;
+		font-size: 2rem;
+		color: #fff;
+		box-sizing: border-box;
+		box-shadow: -10px 10px 25px 0px rgba(50,50,93,0.15);
+
+		&:before {
+			content: "";
+			@include absolute(left $translateGap right 0 bottom $translateGap);
+			height: 45%;
+			background: red;
+			z-index: -5;
+		}
+
+		&.js {
+			background: #F0DB4F;
+
+			&:before {
+				background: lighten(#F0DB4F, 15%);
+			}
+		}
+
+		&.css {
+			background: #1F62AE;
+
+			&:before {
+				background: lighten(#1F62AE, 15%);
+			}
+		}
+
+		&.svg {
+			background: #FF694C;
+
+			&:before {
+				background: lighten(#FF694C, 15%);
+			}
+		}
+
+		&.canvas {
+			background: #9BDC10;
+			font-size: 1.5rem;
+
+			&:before {
+				background: lighten(#9BDC10, 15%);
+			}
+		}
+
+		.card-content {
+			text-align: right;
+			font-family: $raleway;
+			letter-spacing: 1.5px;
+		}
+
+		@for $i from 4 through 1 {
+
+			$index: $i - 1;
+
+			&:nth-child(#{$i}) {
+				transform: translate(-$translateGap * $index, -$translateGap * $index);
+				z-index: -$index;
+			}
+		}
+
+		// &:nth-child(2) {
+		// 	transform: translate(-$translateGap, $translateGap);
+		// }
+	}
+
+}
+
 @media (min-width: 768px) {
 
 	#works .base-width .pattern {
@@ -139,4 +222,16 @@
   	padding: 20px 30px;
   }
 
+}
+
+@media (max-width: 767px) {
+
+	.reverse-column-mobile {
+		flex-direction: column-reverse;
+	}
+
+	.stack-cards {
+		margin: 50px auto 100px;
+		zoom: .8;
+	}
 }
