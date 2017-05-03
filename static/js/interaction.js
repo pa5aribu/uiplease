@@ -59,8 +59,8 @@ function animateCards(activeCard, nextCards){
 		})
 
 		.staggerTo(nextCards, .3, {
-			x: "+=30",
-			y: "+=30",
+			x: "+=20",
+			y: "+=20",
 			onComplete: function(){
 				// console.log(this.target)
 
@@ -83,8 +83,8 @@ function animateCards(activeCard, nextCards){
 		})
 
 		.to(activeCard, .3, {
-			x: "+=30",
-			y: "+=30",
+			x: "+=20",
+			y: "+=20",
 			opacity: 1,
 			onComplete: function(){
 				cards.push(activeCard);
