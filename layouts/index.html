@@ -32,18 +32,44 @@
 
     <section id="home">
       <div class="base-width home-content">
-        <!-- <p>Exploring and building modern-<br>interactive UI on the web.</p> -->
-        <p>Learn how to build UI animation<br> in CSS, SVG/Canvas, and JavaScript</p>
-        <div class="form-detail">Subscribe to get new experiment in your inbox weekly!</div>
-        
-        <!-- mailchimp form -->
-        <form class="subscribe-wrapper" action="//balapa.us8.list-manage.com/subscribe/post?u=074a5f521f440ccfa7bacb4e3&amp;id=8a4070226e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-          <input autocomplete="off" type="email" name="EMAIL" id="mce-EMAIL" placeholder="Enter email address" required>
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input type="text" name="b_074a5f521f440ccfa7bacb4e3_8a4070226e" tabindex="-1" value="">
+        <div class="row middle-md middle-sm reverse-column-mobile">
+          <div class="col-md-7 col-sm-7 col-xs-12">
+
+            <!-- <p>Exploring and building modern-<br>interactive UI on the web.</p> -->
+            <p>Learn how to build UI animation<br> in CSS, SVG/Canvas, and JavaScript.</p>
+            <!-- <p>Learn how to build creative<br>UI animations on the web.</p> -->
+            <div class="form-detail">Subscribe to get new experiment in your inbox weekly!</div>
+            
+            <!-- mailchimp form -->
+            <form class="subscribe-wrapper" action="//balapa.us8.list-manage.com/subscribe/post?u=074a5f521f440ccfa7bacb4e3&amp;id=8a4070226e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+              <input autocomplete="off" type="email" name="EMAIL" id="mce-EMAIL" placeholder="Enter email address" required>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_074a5f521f440ccfa7bacb4e3_8a4070226e" tabindex="-1" value="">
+              </div>
+              <input class="button" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+            </form>
+
           </div>
-          <input class="button" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-        </form>
+
+          <div class="col-md-5 col-sm-5 col-xs-12">
+            
+            <div class="stack-cards">
+              <div class="card css" data-state="active">
+                <div class="card-content">CSS</div>
+              </div>
+              <div class="card svg">
+                <div class="card-content">SVG</div>
+              </div>
+              <div class="card canvas">
+                <div class="card-content">Canvas</div>
+              </div>
+              <div class="card js">
+                <div class="card-content">JS</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
 
     </section>
 
@@ -78,6 +104,8 @@
 
     <a href="https://twitter.com/balapazz" class="madeby">by @balapazz</a>
 
+    <script src="http://balap.us/lib/get.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script src='{{ "js/interaction.js" | relURL }}'></script>
 
   </body>
