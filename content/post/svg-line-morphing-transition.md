@@ -9,7 +9,7 @@ github = "https://github.com/balapa/SVG-Line-Morphing-Transition"
 
 +++
 
-In this tutorial we're gonna be looking how SVG line animation can be used as button's indicator. The idea is to morph circular SVG line into straight line and morphs back into circle SVG. We will incorporate this effect into image carousel.
+In this tutorial we're gonna be looking at how SVG line animation can be used as button's indicator. The idea is to morph circular SVG line into straight line and morphs back into circle SVG. We will incorporate this effect into image carousel.
 
 #### The basic concept
 
