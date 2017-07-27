@@ -231,13 +231,17 @@ $imagePad: 40px;
 		width: 100%;
 		display: block;
 		position: relative;
-		box-shadow: -20px 15px 50px 0px rgba(50, 50, 93, 0.05), -20px 20px 35px rgba(50, 50, 93, 0.15);
+		// box-shadow: -20px 15px 50px 0px rgba(50, 50, 93, 0.05), -20px 20px 35px rgba(50, 50, 93, 0.15);
 	}
 }
 
 .buttons-wrapper {
 	text-align: left;
 	font-size: 0;
+
+	li {
+		display: inline-block;
+	}
 
 	.button {
 		margin-right: 14px;

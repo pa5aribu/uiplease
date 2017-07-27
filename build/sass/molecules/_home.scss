@@ -1,6 +1,6 @@
 .madeby {
 	@include fixed(bottom 20px right 20px);
-	background: #000;
+	background: #55acee;
 	padding: 5px 8px;
 	border-radius: 3px;
 	color: #fff;
@@ -209,6 +209,19 @@ $translateGap: 20px;
 		// }
 	}
 
+}
+
+#notification {
+	background: #eee;
+	padding: 15px 0;
+	font-family: $raleway;
+	font-size: 14px;
+	line-height: 1.5;
+
+	a {
+		color: #426ec2;
+    text-decoration: underline;
+	}
 }
 
 @media (min-width: 768px) {

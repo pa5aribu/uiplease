@@ -91,7 +91,7 @@ header {
 
 	li {
 		display: inline-block;
-		margin-left: 15px;
+		margin-left: 20px;
 	}
 
 	&.article-header-navigation {
@@ -102,7 +102,7 @@ header {
 
 	&:not(.article-header-navigation) {
 
-		a {
+		a:not(.button-else) {
 			font-size: 1rem;
 			line-height: 40px;
 			display: block;
